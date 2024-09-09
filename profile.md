@@ -10,4 +10,5 @@ Vivo en Barcelona desde hace 7 años y siento que es mi casa. Es una ciudad súp
 Me gradué en química e hice un máster en química de materiales aplicada. Trabajé 6 años como investigadora en un centro tecnológico desarrollando materiales para diferentes aplicaciones como energías, tratamiento de aguas, recuperación de metales, etc. 
 Básicamente, me especialicé en membranas.
 ## Mi experiencia con la programación.
-Hace unos meses empecé a formarme en esta rama y completé el curso de "Fundamentos del Análisis de Datos" en Cibernárium de Barcelona Activa. 
+Hace unos meses empecé a formarme en esta rama y completé el curso de "Fundamentos del Análisis de Datos" en Cibernárium de Barcelona Activa. Ahí pude dar mis primeros pasos en SQL, PowerBI y Python, y descubrí que me gusta mucho este mundo y quiero seguir formándome y dedicarme a esto.
+
