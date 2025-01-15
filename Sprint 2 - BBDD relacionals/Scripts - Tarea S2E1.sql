@@ -1,27 +1,39 @@
 USE transactions;
 
--- NIVEL 1
 
+-- NIVEL 1 --
+
+-- Ejercicio 1: A partir dels documents adjunts (estructura_dades i dades_introduir), importa les dues taules. Mostra les característiques principals de l'esquema creat i explica les diferents taules i variables que existeixen. Assegura't d'incloure un diagrama que il·lustri la relació entre les diferents taules i variables.
+	-- Comprobar total transacciones
 SELECT 
     COUNT(*)
 FROM
     transaction;-- 587 transactions
 
+	-- Comprobar total empresas
 SELECT 
     COUNT(*)
 FROM
     company;-- 100 companies
     
     
+-- Ejercicio 2: Utilitzant JOIN realitzaràs les següents consultes:
+
+	-- Llistat dels països que estan fent compres.
+		-- Países únicos: select distinct
+        -- ambas tablas JOIN
+		-- Están haciendo compras, no importa si son aceptadas o rechazadas: ambas.
 SELECT DISTINCT
     c.country AS Countries
 FROM
-    company AS c
+    transaction AS t
         JOIN
-    transaction AS t ON c.id = t.company_id
-ORDER BY c.country; -- LISTA
+    company AS c ON c.id = t.company_id
+ORDER BY c.country; -- LISTA de 15 países
 
-	SELECT 
+	-- Des de quants països es realitzen les compres.
+		-- Al igual que el anterior, países desde donde se realizan las compras, sean luego rechazadas o no.
+SELECT 
     COUNT(DISTINCT c.country) AS Total
 FROM
     company AS c
@@ -30,15 +42,16 @@ FROM
 ORDER BY c.country; -- Total = 15
 
 	-- Identifica la companyia amb la mitjana més gran de vendes.
-		SELECT 
+SELECT 
     c.company_name AS Company, AVG(t.amount) AS Average_Sales
 FROM
     company AS c
         JOIN
     transaction AS t ON c.id = t.company_id
+WHERE t.declined = 0
 GROUP BY c.company_name
 ORDER BY Average_Sales DESC
-LIMIT 1; -- La empresa "Eget Ipsum Ltd" es la que mayor media de ventas tiene con un total de 473.075
+LIMIT 1; -- La empresa "Eget Ipsum Ltd" es la que mayor media de ventas tiene con un total de 481.86
 
 
 -- Ejercicio 3. Usando subqueries:
@@ -51,12 +64,13 @@ SELECT
 FROM
     transaction AS t
 WHERE
-    t.company_id IN (SELECT 
+    t.declined = 0
+    AND t.company_id IN (SELECT 
             c.id
         FROM
             company AS c
         WHERE
-            c.country = 'Germany'); -- 118 transacciones
+            c.country = 'Germany'); -- 111 transacciones
     
     -- Llista les empreses que han realitzat transaccions per un amount superior a la mitjana de totes les transaccions.
 		-- Calcular la media de las transacciones
@@ -72,11 +86,12 @@ WHERE
         FROM
             transaction AS t
         WHERE
-            t.amount > (SELECT 
+            t.declined = 0
+            AND t.amount > (SELECT 
                     AVG(t2.amount)
                 FROM
                     transaction AS t2))
-ORDER BY c.company_name; -- 70 empresas
+ORDER BY c.company_name; -- 50 empresas
     
     -- Eliminaran del sistema les empreses que no tenen transaccions registrades, entrega el llistat d'aquestes empreses.
 		-- Empresas que no tienen ventas: aquellas que están en la tabla company pero NO ESTÁn en la tabla transaction
@@ -86,13 +101,27 @@ SELECT *
 FROM company AS c
 WHERE c.id NOT IN (
 	SELECT t.company_id
-    FROM transaction AS t);		-- sin resultados
+    FROM transaction AS t
+    WHERE t.declined = 1);		-- 13 rows
+
+			-- Alternativa con Not exists
+SELECT *
+FROM company AS c
+WHERE NOT EXISTS (
+	SELECT 1
+	FROM transaction AS t
+	WHERE t.company_id = c.id
+	  AND t.declined = 1
+);					-- 13 rows
+ 
+
 			-- Compruebo:
-            SELECT DISTINCT
-    company_id
-FROM
-    transaction; -- 100 resultados. Todas las empresas tienen transacciones.
-    
+SELECT DISTINCT c.id
+FROM company AS c
+LEFT JOIN transaction AS t
+  ON c.id = t.company_id
+WHERE t.declined = 1; -- 87 empresas con transacciones rechazadas
+
     
 -- NIVEL 2
 
@@ -100,6 +129,7 @@ FROM
 		-- Mostrar: t.timestamp + sum(t.amount) --> agrupar las sumas en función del día (group by)
         -- Solo tabla transactions
         -- ojo columna timestamp! contiene días y horas, sólo queremos tomar los días!
+        -- declined = 0 (solo transfers aprobadas)
         -- ordenar sumas en DESC
         -- limit 5
 					SELECT *
@@ -111,6 +141,7 @@ SELECT
     SUM(amount) AS Total
 FROM
     transaction
+WHERE declined = 0
 GROUP BY Date
 ORDER BY Total DESC
 LIMIT 5;
@@ -126,6 +157,7 @@ FROM
     transaction AS t
         JOIN
     company AS c ON c.id = t.company_id
+WHERE declined = 0
 GROUP BY Country
 ORDER BY Media DESC;
 
@@ -136,21 +168,7 @@ ORDER BY Media DESC;
         -- Mostrar: t.id, c.country, c.company_name
         -- JOIN c + t
         -- SubQ en el filtro
-SELECT 
-    t.id AS Transaction,
-    c.country AS Country,
-    c.company_name AS Company
-FROM
-    transaction AS t
-        JOIN
-    company AS c ON t.company_id = c.id
-WHERE
-    c.country = (SELECT 
-            c.country
-        FROM
-            company AS c
-        WHERE
-            c.company_name = 'Non Institute');	-- 100 resultados, entre ellos sale "Non Institute" # REVISAR
+        -- entendiendo como transacciones realizadas TODAS las de la tabla (aceptadas y rechazadas)
             
             -- Excluyendo Non Institute
             SELECT 
@@ -174,49 +192,7 @@ WHERE
 		-- Q: mostrar t.id, c.country, c.company_name
         -- subQ: en select para filtrar país
         -- SubQ 2: en el from para filtrar país?
-SELECT id AS Transaction
-FROM transaction
-WHERE company_id IN (
-	SELECT id
-    FROM company
-    WHERE company_name IN (
-		SELECT 
-            country
-        FROM
-            company
-        WHERE
-            company_name = 'Non Institute')
-            ); -- SIN RESULTADOS
-
-SELECT (
-	SELECT id
-    FROM transaction) AS Transaction,
-    country AS Country,
-    company_name AS Company
-FROM company
-WHERE company_name IN (
-		SELECT 
-            country
-        FROM
-            company
-        WHERE
-            company_name = 'Non Institute'
-            ); -- SIN RESULTADOS
-
-		-- Otra forma
-SELECT t.id AS Transaction -- , c.country AS Country, c.company_name AS Company
-FROM transaction t
-WHERE t.company_id IN (
-    SELECT c.id
-    FROM company c
-    WHERE c.country = (
-        SELECT country
-        FROM company
-        WHERE company_name = 'Non Institute'
-    )
-); -- 100 resultados, pero no puedo poner 3 columnas
-
--- Excluyendo NI
+	-- Excluyendo NI
 SELECT t.id AS Transaction -- , c.country AS Country, c.company_name AS Company
 FROM transaction t
 WHERE t.company_id IN (
@@ -248,9 +224,26 @@ FROM
         JOIN
     company AS c ON t.company_id = c.id
 WHERE
-    t.amount BETWEEN '100' AND '200'
+    t.amount BETWEEN 100 AND 200
         AND STR_TO_DATE(timestamp, '%Y-%m-%d') IN ('2021-04-29' , '2021-07-20', '2022-03-13')
 ORDER BY t.amount DESC;
+
+-- simplificando el formateo de fecha:
+SELECT 
+    c.company_name,
+    c.phone,
+    c.country,
+    DATE(t.timestamp) AS Date, -- Extraemos solo la parte de la fecha si es DATETIME
+    t.amount
+FROM
+    transaction AS t
+JOIN
+    company AS c ON t.company_id = c.id
+WHERE
+    t.amount BETWEEN 100 AND 200
+    AND DATE(t.timestamp) IN ('2021-04-29', '2021-07-20', '2022-03-13')
+ORDER BY t.amount DESC;
+
     
 	/* SELECT STR_TO_DATE(timestamp, '%Y-%m-%d') AS Date, t.amount
     FROM transaction AS t
@@ -267,7 +260,7 @@ ORDER BY t.amount DESC;
 SELECT 
     c.id,
     c.company_name,
-    COUNT(t.id) AS 'Total',
+    COUNT(t.id) AS 'Transaction_count',
     CASE
         WHEN COUNT(t.id) >= 4 THEN 'Greater than or equal to 4'
         ELSE 'Lower than 4'
@@ -276,5 +269,6 @@ FROM
     transaction AS t
         JOIN
     company AS c ON t.company_id = c.id
+WHERE t.declined = 0
 GROUP BY c.id , c.company_name
-ORDER BY Total desc; -- 100 resultados. 7 son mayores de 4 y el resto son menores.
+ORDER BY COUNT(t.id) desc; -- 100 resultados. 7 son mayores de 4 y el resto son menores.
