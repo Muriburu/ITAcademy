@@ -234,6 +234,47 @@ WHERE t.company_id IN (
 -- Nivel 3
 
 -- Ejercicio 1: Presenta el nom, telèfon, país, data i amount, d'aquelles empreses que van realitzar transaccions amb un valor comprès entre 100 i 200 euros i en alguna d'aquestes dates: 29 d'abril del 2021, 20 de juliol del 2021 i 13 de març del 2022. Ordena els resultats de major a menor quantitat.
-		-- Mostrar: c.company_name, c.phone, c.country, c.timestamp, t.amount
+		-- Mostrar: c.company_name, c.phone, c.country, t.timestamp en formato "%Y-%m-%d", t.amount
         -- JOIN t + c
-        -- Filtro: t.amount between 100 and 200, y 
+        -- Filtro: t.amount between 100 and 200, y t.timestamp in ('2021-04-29', '2021-07-20', '2022-03-13')
+SELECT 
+    c.company_name,
+    c.phone,
+    c.country,
+    STR_TO_DATE(timestamp, '%Y-%m-%d') AS Date,
+    t.amount
+FROM
+    transaction AS t
+        JOIN
+    company AS c ON t.company_id = c.id
+WHERE
+    t.amount BETWEEN '100' AND '200'
+        AND STR_TO_DATE(timestamp, '%Y-%m-%d') IN ('2021-04-29' , '2021-07-20', '2022-03-13')
+ORDER BY t.amount DESC;
+    
+	/* SELECT STR_TO_DATE(timestamp, '%Y-%m-%d') AS Date, t.amount
+    FROM transaction AS t
+    JOIN company AS c
+    ON t.company_id = c.id
+    ORDER BY t.amount desc, Date; */
+    
+
+-- Ejercicio 2: Necessitem optimitzar l'assignació dels recursos i dependrà de la capacitat operativa que es requereixi, per la qual cosa et demanen la informació sobre la quantitat de transaccions que realitzen les empreses, però el departament de recursos humans és exigent i vol un llistat de les empreses on especifiquis si tenen més de 4 transaccions o menys.
+		-- Mostrar: c.id, c.company_name, sum(t.id) AS Total, "nueva columna"
+        -- Crear nueva columna "Transaction state": '>4' o '<4' --> CASE
+        -- JOIN c + t
+        -- Agrupar sum(t.id) en función del t.company_id
+SELECT 
+    c.id,
+    c.company_name,
+    COUNT(t.id) AS 'Total',
+    CASE
+        WHEN COUNT(t.id) >= 4 THEN 'Greater than or equal to 4'
+        ELSE 'Lower than 4'
+    END AS 'Transaction state'
+FROM
+    transaction AS t
+        JOIN
+    company AS c ON t.company_id = c.id
+GROUP BY c.id , c.company_name
+ORDER BY Total desc; -- 100 resultados. 7 son mayores de 4 y el resto son menores.
