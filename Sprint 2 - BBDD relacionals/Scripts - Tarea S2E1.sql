@@ -2,8 +2,6 @@ USE transactions;
 
 -- NIVEL 1
 
--- Ejercicio 1
-
 SELECT 
     COUNT(*)
 FROM
@@ -12,34 +10,34 @@ FROM
 SELECT 
     COUNT(*)
 FROM
-    company; -- 100 companies
+    company;-- 100 companies
     
     
--- Ejercicio 2. Usando JOIN:
-
-	-- Llistat dels països que estan fent compres
-SELECT DISTINCT c.country AS Countries
-FROM company AS c
-JOIN transaction AS t
-ON c.id = t.company_id
+SELECT DISTINCT
+    c.country AS Countries
+FROM
+    company AS c
+        JOIN
+    transaction AS t ON c.id = t.company_id
 ORDER BY c.country; -- LISTA
 
-	-- Des de quants països es realitzen les compres.
-SELECT COUNT(DISTINCT c.country) AS Total
-FROM company AS c
-JOIN transaction AS t
-ON c.id = t.company_id
+	SELECT 
+    COUNT(DISTINCT c.country) AS Total
+FROM
+    company AS c
+        JOIN
+    transaction AS t ON c.id = t.company_id
 ORDER BY c.country; -- Total = 15
 
 	-- Identifica la companyia amb la mitjana més gran de vendes.
-		-- 1º ordenar las empresas según ventas, de mayor a menor
-		-- 2º buscar el nombre de la empresa con más ventas
-SELECT c.company_name AS Company, AVG(t.amount) AS Average_Sales
-FROM company AS c
-JOIN transaction AS t
-ON c.id = t.company_id
+		SELECT 
+    c.company_name AS Company, AVG(t.amount) AS Average_Sales
+FROM
+    company AS c
+        JOIN
+    transaction AS t ON c.id = t.company_id
 GROUP BY c.company_name
-ORDER BY Average_Sales desc
+ORDER BY Average_Sales DESC
 LIMIT 1; -- La empresa "Eget Ipsum Ltd" es la que mayor media de ventas tiene con un total de 473.075
 
 
@@ -48,27 +46,36 @@ LIMIT 1; -- La empresa "Eget Ipsum Ltd" es la que mayor media de ventas tiene co
 	-- Mostra totes les transaccions realitzades per empreses d'Alemanya.
 		-- Q: select * de t where ..
 		-- SubQ: c.country in Germany --> La subQ en el where
-SELECT *
-FROM transaction AS t
-WHERE t.company_id IN (
-	SELECT c.id	-- SubQ
-    FROM company as c
-    WHERE c.country = "Germany"
-); -- 118 transacciones
+SELECT 
+    *
+FROM
+    transaction AS t
+WHERE
+    t.company_id IN (SELECT 
+            c.id
+        FROM
+            company AS c
+        WHERE
+            c.country = 'Germany'); -- 118 transacciones
     
     -- Llista les empreses que han realitzat transaccions per un amount superior a la mitjana de totes les transaccions.
 		-- Calcular la media de las transacciones
         -- Buscar los id de las empresas con ttransacciones mayor a las de la media
         -- Relacionar los id de las empresas con los company_name (DISTINCT!!)
-SELECT DISTINCT c.company_name	-- Q principal
-FROM company AS c
-WHERE c.id IN (
-    SELECT t.company_id			-- SubQ 1
-    FROM transaction AS t
-    WHERE t.amount > (
-		SELECT AVG(t2.amount) 	-- SubQ 2 -- Ver si hay alguna forma de hacerlo sin esta subQ
-        FROM transaction AS t2)
-)
+SELECT DISTINCT
+    c.company_name
+FROM
+    company AS c
+WHERE
+    c.id IN (SELECT 
+            t.company_id
+        FROM
+            transaction AS t
+        WHERE
+            t.amount > (SELECT 
+                    AVG(t2.amount)
+                FROM
+                    transaction AS t2))
 ORDER BY c.company_name; -- 70 empresas
     
     -- Eliminaran del sistema les empreses que no tenen transaccions registrades, entrega el llistat d'aquestes empreses.
@@ -81,5 +88,152 @@ WHERE c.id NOT IN (
 	SELECT t.company_id
     FROM transaction AS t);		-- sin resultados
 			-- Compruebo:
-            SELECT DISTINCT company_id
-			FROM transaction; -- 100 resultados. Todas las empresas tienen transacciones.
+            SELECT DISTINCT
+    company_id
+FROM
+    transaction; -- 100 resultados. Todas las empresas tienen transacciones.
+    
+    
+-- NIVEL 2
+
+-- Ejercicio 1: Identifica els cinc dies que es va generar la quantitat més gran d'ingressos a l'empresa per vendes. Mostra la data de cada transacció juntament amb el total de les vendes.
+		-- Mostrar: t.timestamp + sum(t.amount) --> agrupar las sumas en función del día (group by)
+        -- Solo tabla transactions
+        -- ojo columna timestamp! contiene días y horas, sólo queremos tomar los días!
+        -- ordenar sumas en DESC
+        -- limit 5
+					SELECT *
+					FROM transaction
+					ORDER BY str_to_date(timestamp, '%Y-%m-%d') DESC;
+
+SELECT 
+    STR_TO_DATE(timestamp, '%Y-%m-%d') AS Date,
+    SUM(amount) AS Total
+FROM
+    transaction
+GROUP BY Date
+ORDER BY Total DESC
+LIMIT 5;
+
+-- Ejercicio 2: Quina és la mitjana de vendes per país? Presenta els resultats ordenats de major a menor mitjà.
+		-- Mostrar c.country + AVG(t.amount) --> agrupar por país
+        -- Ambas tablas --> JOIN
+        -- ordenar avg desc
+        -- No hay top, todos los resultados
+SELECT 
+    c.country AS Country, AVG(t.amount) AS Media
+FROM
+    transaction AS t
+        JOIN
+    company AS c ON c.id = t.company_id
+GROUP BY Country
+ORDER BY Media DESC;
+
+-- Ejercicio 3: En la teva empresa, es planteja un nou projecte per a llançar algunes campanyes publicitàries per a fer competència a la companyia "Non Institute". Per a això, et demanen la llista de totes les transaccions realitzades per empreses que estan situades en el mateix país que aquesta companyia.
+
+	-- Mostra el llistat aplicant JOIN i subconsultes.
+		-- company_name = "Non Institute" --> buscar país correspondiente
+        -- Mostrar: t.id, c.country, c.company_name
+        -- JOIN c + t
+        -- SubQ en el filtro
+SELECT 
+    t.id AS Transaction,
+    c.country AS Country,
+    c.company_name AS Company
+FROM
+    transaction AS t
+        JOIN
+    company AS c ON t.company_id = c.id
+WHERE
+    c.country = (SELECT 
+            c.country
+        FROM
+            company AS c
+        WHERE
+            c.company_name = 'Non Institute');	-- 100 resultados, entre ellos sale "Non Institute" # REVISAR
+            
+            -- Excluyendo Non Institute
+            SELECT 
+				t.id AS Transaction,
+				c.country AS Country,
+				c.company_name AS Company
+			FROM
+				transaction AS t
+					JOIN
+				company AS c ON t.company_id = c.id
+			WHERE
+				c.country = (SELECT 
+						c.country
+					FROM
+						company AS c
+					WHERE
+						c.company_name = 'Non Institute')
+				AND c.company_name != 'Non Institute'; -- Excluir explicitamente, 70 resultados
+
+	-- Mostra el llistat aplicant solament subconsultes.
+		-- Q: mostrar t.id, c.country, c.company_name
+        -- subQ: en select para filtrar país
+        -- SubQ 2: en el from para filtrar país?
+SELECT id AS Transaction
+FROM transaction
+WHERE company_id IN (
+	SELECT id
+    FROM company
+    WHERE company_name IN (
+		SELECT 
+            country
+        FROM
+            company
+        WHERE
+            company_name = 'Non Institute')
+            ); -- SIN RESULTADOS
+
+SELECT (
+	SELECT id
+    FROM transaction) AS Transaction,
+    country AS Country,
+    company_name AS Company
+FROM company
+WHERE company_name IN (
+		SELECT 
+            country
+        FROM
+            company
+        WHERE
+            company_name = 'Non Institute'
+            ); -- SIN RESULTADOS
+
+		-- Otra forma
+SELECT t.id AS Transaction -- , c.country AS Country, c.company_name AS Company
+FROM transaction t
+WHERE t.company_id IN (
+    SELECT c.id
+    FROM company c
+    WHERE c.country = (
+        SELECT country
+        FROM company
+        WHERE company_name = 'Non Institute'
+    )
+); -- 100 resultados, pero no puedo poner 3 columnas
+
+-- Excluyendo NI
+SELECT t.id AS Transaction -- , c.country AS Country, c.company_name AS Company
+FROM transaction t
+WHERE t.company_id IN (
+    SELECT c.id
+    FROM company c
+    WHERE c.country = (
+        SELECT country
+        FROM company
+        WHERE company_name = 'Non Institute'
+    )
+		AND c.company_name != 'Non Institute'); -- 70 resultados, pero no puedo poner 3 columnas
+        
+        
+        
+-- Nivel 3
+
+-- Ejercicio 1: Presenta el nom, telèfon, país, data i amount, d'aquelles empreses que van realitzar transaccions amb un valor comprès entre 100 i 200 euros i en alguna d'aquestes dates: 29 d'abril del 2021, 20 de juliol del 2021 i 13 de març del 2022. Ordena els resultats de major a menor quantitat.
+		-- Mostrar: c.company_name, c.phone, c.country, c.timestamp, t.amount
+        -- JOIN t + c
+        -- Filtro: t.amount between 100 and 200, y 
