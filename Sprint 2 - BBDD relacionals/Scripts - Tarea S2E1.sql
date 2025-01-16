@@ -37,13 +37,14 @@ SELECT
     COUNT(DISTINCT c.country) AS Total
 FROM
     company AS c
-        JOIN
+        RIGHT JOIN
     transaction AS t ON c.id = t.company_id
+WHERE t.declined = 0
 ORDER BY c.country; -- Total = 15
 
 	-- Identifica la companyia amb la mitjana més gran de vendes.
 SELECT 
-    c.company_name AS Company, AVG(t.amount) AS Average_Sales
+    c.company_name AS Company, ROUND(AVG(t.amount),2) AS Average_Sales
 FROM
     company AS c
         JOIN
@@ -51,7 +52,8 @@ FROM
 WHERE t.declined = 0
 GROUP BY c.company_name
 ORDER BY Average_Sales DESC
-LIMIT 1; -- La empresa "Eget Ipsum Ltd" es la que mayor media de ventas tiene con un total de 481.86
+LIMIT 1; 
+-- La empresa "Eget Ipsum Ltd" es la que mayor media de ventas tiene con un total de 481.86
 
 
 -- Ejercicio 3. Usando subqueries:
@@ -90,8 +92,36 @@ WHERE
             AND t.amount > (SELECT 
                     AVG(t2.amount)
                 FROM
-                    transaction AS t2))
-ORDER BY c.company_name; -- 50 empresas
+                    transaction AS t2
+				WHERE
+					t2.declined = 0))
+ORDER BY c.company_name; -- 49 empresas
+
+SELECT DISTINCT
+	t.company_id, (
+				SELECT c.company_name
+                FROM company AS c
+                WHERE c.id = t.company_id
+                ) AS company_name
+FROM
+	transaction AS t
+WHERE
+	declined = 0
+	AND amount > (
+				SELECT 
+						AVG(amount)
+                FROM
+                    transaction
+				WHERE declined = 0)
+ORDER BY company_id; -- 49 empresas
+
+    -- Cálculo de la media de transacciones aceptadas.
+    SELECT 
+			ROUND(AVG(amount),2)
+	FROM
+			transaction
+	WHERE declined = 0; -- 259.01
+    
     
     -- Eliminaran del sistema les empreses que no tenen transaccions registrades, entrega el llistat d'aquestes empreses.
 		-- Empresas que no tienen ventas: aquellas que están en la tabla company pero NO ESTÁn en la tabla transaction
@@ -102,25 +132,32 @@ FROM company AS c
 WHERE c.id NOT IN (
 	SELECT t.company_id
     FROM transaction AS t
-    WHERE t.declined = 1);		-- 13 rows
+    WHERE t.declined = 0);		-- 0 rows
 
 			-- Alternativa con Not exists
 SELECT *
 FROM company AS c
 WHERE NOT EXISTS (
-	SELECT 1
+	SELECT t.company_id
 	FROM transaction AS t
 	WHERE t.company_id = c.id
-	  AND t.declined = 1
-);					-- 13 rows
+	  AND t.declined = 0
+);					-- 0 rows
  
 
 			-- Compruebo:
-SELECT DISTINCT c.id
+SELECT DISTINCT c.id, c.company_name
 FROM company AS c
 LEFT JOIN transaction AS t
   ON c.id = t.company_id
 WHERE t.declined = 1; -- 87 empresas con transacciones rechazadas
+
+SELECT c.*
+FROM company AS c
+LEFT JOIN transaction AS t
+  ON c.id = t.company_id 
+WHERE t.company_id IS NULL AND t.declined = 0;
+
 
     
 -- NIVEL 2
@@ -134,16 +171,16 @@ WHERE t.declined = 1; -- 87 empresas con transacciones rechazadas
         -- limit 5
 					SELECT *
 					FROM transaction
-					ORDER BY str_to_date(timestamp, '%Y-%m-%d') DESC;
+					ORDER BY timestamp DESC;
 
 SELECT 
-    STR_TO_DATE(timestamp, '%Y-%m-%d') AS Date,
-    SUM(amount) AS Total
+    DATE(timestamp) AS transaction_date,
+    SUM(amount) AS total_amount
 FROM
     transaction
 WHERE declined = 0
-GROUP BY Date
-ORDER BY Total DESC
+GROUP BY transaction_date
+ORDER BY total_amount DESC
 LIMIT 5;
 
 -- Ejercicio 2: Quina és la mitjana de vendes per país? Presenta els resultats ordenats de major a menor mitjà.
@@ -152,14 +189,14 @@ LIMIT 5;
         -- ordenar avg desc
         -- No hay top, todos los resultados
 SELECT 
-    c.country AS Country, AVG(t.amount) AS Media
+    c.country, ROUND(AVG(t.amount),2) AS average_transactions
 FROM
     transaction AS t
         JOIN
     company AS c ON c.id = t.company_id
 WHERE declined = 0
 GROUP BY Country
-ORDER BY Media DESC;
+ORDER BY average_transactions DESC;
 
 -- Ejercicio 3: En la teva empresa, es planteja un nou projecte per a llançar algunes campanyes publicitàries per a fer competència a la companyia "Non Institute". Per a això, et demanen la llista de totes les transaccions realitzades per empreses que estan situades en el mateix país que aquesta companyia.
 
@@ -171,41 +208,55 @@ ORDER BY Media DESC;
         -- entendiendo como transacciones realizadas TODAS las de la tabla (aceptadas y rechazadas)
             
             -- Excluyendo Non Institute
-            SELECT 
-				t.id AS Transaction,
-				c.country AS Country,
-				c.company_name AS Company
-			FROM
-				transaction AS t
-					JOIN
-				company AS c ON t.company_id = c.id
-			WHERE
-				c.country = (SELECT 
-						c.country
-					FROM
-						company AS c
-					WHERE
-						c.company_name = 'Non Institute')
-				AND c.company_name != 'Non Institute'; -- Excluir explicitamente, 70 resultados
+SELECT 
+    c.country, c.company_name, t.id AS transaction_id, t.amount
+FROM
+    transaction AS t
+        JOIN
+    company AS c ON t.company_id = c.id
+WHERE
+    t.declined = 0
+        AND c.country = (SELECT 
+            c.country
+        FROM
+            company AS c
+        WHERE
+            c.company_name = 'Non Institute')
+	AND c.company_name != 'Non Institute'
+ORDER BY c.company_name;
 
 	-- Mostra el llistat aplicant solament subconsultes.
 		-- Q: mostrar t.id, c.country, c.company_name
         -- subQ: en select para filtrar país
         -- SubQ 2: en el from para filtrar país?
 	-- Excluyendo NI
-SELECT t.id AS Transaction -- , c.country AS Country, c.company_name AS Company
-FROM transaction t
-WHERE t.company_id IN (
-    SELECT c.id
-    FROM company c
-    WHERE c.country = (
-        SELECT country
-        FROM company
-        WHERE company_name = 'Non Institute'
-    )
-		AND c.company_name != 'Non Institute'); -- 70 resultados, pero no puedo poner 3 columnas
+SELECT 
+    t.id AS transaction_id,
+    t.amount,
+    (SELECT c.country
+        FROM company AS c
+        WHERE c.id = t.company_id) AS country,
+	(SELECT c.company_name
+		FROM company AS c
+        WHERE c.id = t.company_id) AS company_name
+FROM
+    transaction t
+WHERE
+    t.declined = 0
+        AND t.company_id IN (SELECT 
+            c.id
+        FROM
+            company c
+        WHERE
+            c.country = (SELECT country
+                FROM company
+                WHERE company_name = 'Non Institute')
+			AND c.company_name != 'Non Institute')
+ORDER BY (SELECT c.company_name
+		FROM company AS c
+        WHERE c.id = t.company_id);
         
-        
+
         
 -- Nivel 3
 
@@ -213,34 +264,20 @@ WHERE t.company_id IN (
 		-- Mostrar: c.company_name, c.phone, c.country, t.timestamp en formato "%Y-%m-%d", t.amount
         -- JOIN t + c
         -- Filtro: t.amount between 100 and 200, y t.timestamp in ('2021-04-29', '2021-07-20', '2022-03-13')
-SELECT 
-    c.company_name,
-    c.phone,
-    c.country,
-    STR_TO_DATE(timestamp, '%Y-%m-%d') AS Date,
-    t.amount
-FROM
-    transaction AS t
-        JOIN
-    company AS c ON t.company_id = c.id
-WHERE
-    t.amount BETWEEN 100 AND 200
-        AND STR_TO_DATE(timestamp, '%Y-%m-%d') IN ('2021-04-29' , '2021-07-20', '2022-03-13')
-ORDER BY t.amount DESC;
 
--- simplificando el formateo de fecha:
 SELECT 
     c.company_name,
     c.phone,
     c.country,
-    DATE(t.timestamp) AS Date, -- Extraemos solo la parte de la fecha si es DATETIME
+    DATE(t.timestamp) AS transaction_date, 
     t.amount
 FROM
     transaction AS t
 JOIN
     company AS c ON t.company_id = c.id
 WHERE
-    t.amount BETWEEN 100 AND 200
+    t.declined = 0
+    AND t.amount BETWEEN 100 AND 200
     AND DATE(t.timestamp) IN ('2021-04-29', '2021-07-20', '2022-03-13')
 ORDER BY t.amount DESC;
 
@@ -260,15 +297,17 @@ ORDER BY t.amount DESC;
 SELECT 
     c.id,
     c.company_name,
-    COUNT(t.id) AS 'Transaction_count',
+    COUNT(t.id) AS 'transaction_count',
     CASE
-        WHEN COUNT(t.id) >= 4 THEN 'Greater than or equal to 4'
+        WHEN COUNT(t.id) > 4 THEN 'Greater than 4'
+        WHEN COUNT(t.id) = 4 THEN 'Equal to 4'
         ELSE 'Lower than 4'
-    END AS 'Transaction state'
+    END AS 'transaction_state'
 FROM
     transaction AS t
         JOIN
     company AS c ON t.company_id = c.id
 WHERE t.declined = 0
 GROUP BY c.id , c.company_name
-ORDER BY COUNT(t.id) desc; -- 100 resultados. 7 son mayores de 4 y el resto son menores.
+ORDER BY COUNT(t.id) desc;
+ -- 100 resultados. 7 son mayores de 4 y el resto son menores.
