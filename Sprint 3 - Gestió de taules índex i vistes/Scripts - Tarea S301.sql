@@ -24,8 +24,8 @@ CREATE TABLE IF NOT EXISTS credit_card (
         expiring_date VARCHAR(20), -- DATE('%d/%m/%Y')
         PRIMARY KEY (id)       
     );
-    -- Añadimos FK en tabla transaction
 	-- Añadimos los datos: datos_introducir_credit.sql --> 275 filas
+	-- Añadimos FK en tabla transaction
 ALTER TABLE transaction
 ADD FOREIGN KEY (credit_card_id) REFERENCES credit_card(id);
 
@@ -109,7 +109,7 @@ Elimina de la taula transaction el registre amb ID 02C6201E-D90A-1859-B4EE-88D29
 
 	-- Antes del cambio:
 SELECT *
-FROM transaction; -- 588 registros
+FROM transaction; -- 587 registros
 SELECT *
 FROM transaction
 WHERE id = '02C6201E-D90A-1859-B4EE-88D2986D3B02'; -- compruebo que el registro existe
@@ -118,7 +118,7 @@ DELETE FROM transaction
 WHERE id = '02C6201E-D90A-1859-B4EE-88D2986D3B02';
 	-- Compruebo:
 SELECT *
-FROM transaction; -- 587 registros
+FROM transaction; -- 586 registros
 SELECT *
 FROM transaction
 WHERE id = '02C6201E-D90A-1859-B4EE-88D2986D3B02'; -- 0 rows porque el registro ya no existe
@@ -160,8 +160,23 @@ WHERE country = 'Germany'; -- 8 empresas
  Et demana que l'ajudis a deixar els comandos executats per a obtenir el següent diagrama: */
 	-- cargar estructura_datos_user.sql
     -- cargar datos_introducir_user (1)
- -- consultar si se refiere a añadir tablas + reverse engineering
  
+	-- 1. Añadir columna credit_card.fecha_actual:
+ALTER TABLE credit_card
+ADD fecha_actual TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP; 
+		-- de esta forma se actualizará automáticamente al hacer uso de ella
+	-- 2. Eliminar columna company.website:
+ALTER TABLE company
+DROP COLUMN website;
+	-- 3. Modificar nombres tabla user:
+ALTER TABLE user RENAME data_user;
+ALTER TABLE data_user RENAME COLUMN email TO personal_email;
+	-- 4. Modificar relación data_user - transaction:
+ALTER TABLE transaction
+ADD CONSTRAINT fk_transaction_user_id FOREIGN KEY (user_id) REFERENCES data_user(id);
+ALTER TABLE data_user
+DROP FOREIGN KEY data_user_ibfk_1;
+
  
  /* Ejercicio 2:
  L'empresa també et sol·licita crear una vista anomenada "InformeTecnico" que contingui la següent informació:
@@ -174,12 +189,18 @@ WHERE country = 'Germany'; -- 8 empresas
 Mostra els resultats de la vista, ordena els resultats de manera descendent en funció de la variable ID de transaction. */
 	-- Crear "InformeTecnico"
 		-- Solo con transacciones aceptadas:
-			-- t.id, u.name, u.surname, cc.iban, c.company_name
+			-- t.id, du.name, u.surname, cc.iban, c.company_name
+		-- Al cargar tabla user tengo que añadir la FK en transactions
+SET foreign_key_checks = 0;
+ALTER TABLE transaction
+ADD FOREIGN KEY (user_id) REFERENCES user(id);
+SET foreign_key_checks = 1;
+	-- Crear la vista
 CREATE VIEW InformeTecnico AS
-SELECT t.id AS transaction_id, u.name AS user_name, u.surname AS user_surname, cc.iban, c.company_name
+SELECT t.id AS transaction_id, du.name AS user_name, du.surname AS user_surname, cc.iban, c.company_name
 FROM transaction AS t
-JOIN user AS u
-ON u.id = t.user_id
+JOIN data_user AS du
+ON du.id = t.user_id
 JOIN company AS c
 ON c.id = t.company_id
 JOIN credit_card AS cc
