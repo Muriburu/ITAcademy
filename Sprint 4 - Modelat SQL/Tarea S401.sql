@@ -1,5 +1,5 @@
 -- Nivel 1 --
-DROP database new_transactions;
+
 /* Descàrrega els arxius CSV, estudia'ls i dissenya una base de dades amb un esquema d'estrella que contingui,
 almenys 4 taules de les quals puguis realitzar les següents consultes: */
 
@@ -179,12 +179,32 @@ GROUP BY cc.iban;
 		-- nueva tabla con 2 columnas. una de ellas ya existe en tabla cc, la otra es nueva y generada a partir de otras tablas --> CASE WHEN
         -- 3 transacciones rechazaadas: active = false = 0.
         -- ordenarlas por timestamp desc para tener las 3 últimas.
+        -- con la función ventana determino solo esas 3 últimas (ordenadas time desc)
 CREATE TABLE card_status(
 	credit_card_id VARCHAR(20),
-    active BOOLEAN
+    active BOOLEAN,
+    PRIMARY KEY (credit_card_id),
+    FOREIGN KEY (credit_card_id) REFERENCES credit_cards(credit_card_id)
     );
- 
+    
 INSERT INTO card_status(credit_card_id, active)
+SELECT
+    t2.credit_card_id,
+    CASE
+        WHEN SUM(t2.declined) = 3 THEN 0
+        ELSE 1
+    END AS status
+FROM (
+    SELECT
+        credit_card_id,
+        declined,
+        ROW_NUMBER() OVER (PARTITION BY credit_card_id ORDER BY timestamp DESC) AS row_num	-- función ventana ROW_NUMBER
+    FROM transactions
+) t2
+WHERE t2.row_num <= 3
+GROUP BY t2.credit_card_id;
+ 
+/* INSERT INTO card_status(credit_card_id, active)
 	SELECT credit_card_id,
 			(CASE 
 				WHEN (CASE
@@ -194,7 +214,7 @@ INSERT INTO card_status(credit_card_id, active)
 					ELSE False
 				END) AS active
 	FROM transactions
-	ORDER BY timestamp DESC;
+	ORDER BY timestamp DESC; */
 
 
 /* Ejercicio 1:
