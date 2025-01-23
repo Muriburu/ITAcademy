@@ -177,7 +177,7 @@ GROUP BY cc.iban;
 
 /* Crea una nova taula que reflecteixi l'estat de les targetes de crèdit basat en si les últimes tres transaccions van ser declinades i genera la següent consulta: */
 		-- nueva tabla con 2 columnas. una de ellas ya existe en tabla cc, la otra es nueva y generada a partir de otras tablas --> CASE WHEN
-        -- 3 transacciones rechazaadas: active = false = 0.
+        -- 3 últimas transacciones rechazadas: active = false = 0.
         -- ordenarlas por timestamp desc para tener las 3 últimas.
         -- con la función ventana determino solo esas 3 últimas (ordenadas time desc)
 CREATE TABLE card_status(
@@ -190,38 +190,26 @@ CREATE TABLE card_status(
 INSERT INTO card_status(credit_card_id, active)
 SELECT
     t2.credit_card_id,
-    CASE
+    CASE			-- suma 1 con cada transferencia rechazada. Si el resultado da 3 --> tarjeta inactiva
         WHEN SUM(t2.declined) = 3 THEN 0
         ELSE 1
     END AS status
-FROM (
+FROM (			-- subQ alias t2 en FROM --> row_number para asignar número de fila
     SELECT
         credit_card_id,
         declined,
-        ROW_NUMBER() OVER (PARTITION BY credit_card_id ORDER BY timestamp DESC) AS row_num	-- función ventana ROW_NUMBER
+        ROW_NUMBER() OVER (PARTITION BY credit_card_id ORDER BY timestamp DESC) AS row_num		-- función ventana ROW_NUMBER
     FROM transactions
-) t2
-WHERE t2.row_num <= 3
+) AS t2
+WHERE t2.row_num <= 3		-- filtramos sólo las 3 últimas transacciones
 GROUP BY t2.credit_card_id;
- 
-/* INSERT INTO card_status(credit_card_id, active)
-	SELECT credit_card_id,
-			(CASE 
-				WHEN (CASE
-						WHEN declined = 1 THEN 0
-						ELSE 1
-					END) >= 3 THEN True		-- tienen que sumar 3 transacciones aceptadas para ser activas
-					ELSE False
-				END) AS active
-	FROM transactions
-	ORDER BY timestamp DESC; */
 
 
 /* Ejercicio 1:
 Quantes targetes estan actives? */
 SELECT COUNT(active) AS active_cards
 FROM card_status
-WHERE active = 1;	-- No hay 
+WHERE active = 1;	-- 275 activas, es decir, todas.
 
 
 -- Nivel 3 --
