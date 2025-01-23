@@ -98,7 +98,7 @@ RENAME COLUMN card_id TO credit_card_id,
 RENAME COLUMN product_ids TO product_list;
 
 	-- Añadir FKs --> relaciones 1 a n entre tablas
-SET foreign_key_checks = 0;			-- Desactivar primero los fk-checks y volver a activarlos después de las modificaciones. Por defecto vienen ya activadas.
+SET foreign_key_checks = 0;			-- Desactivar primero los fk-checks y volver a activarlos después de las modificaciones.
 ALTER TABLE transactions
 ADD CONSTRAINT fk_credit_cards_transactions
 FOREIGN KEY (credit_card_id) REFERENCES credit_cards(credit_card_id),
@@ -117,7 +117,7 @@ CREATE TABLE trans_prod(
     FOREIGN KEY (product_id) REFERENCES products(product_id)
     );
     
-    -- Para poder rellenar esta tabla, es necesario descomponer la columna product_list (strings functions) y crear compinaciones únicas transaction_id - product_id
+    -- Para poder rellenar esta tabla, es necesario descomponer la columna product_list (strings functions) y crear compilaciones únicas transaction_id - product_id
 		-- Funciones SUBSTRING_INDEX(string, delimiter, number) y CHARACTER_LENGTH(string)
 INSERT INTO trans_prod (transaction_id, product_id)
 SELECT
@@ -128,7 +128,9 @@ FROM
 JOIN
     (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3 UNION SELECT 4) n  -- Máximo 4 productos en las listas, los concateno uno en cada fila
     ON CHARACTER_LENGTH(t.product_list) - CHARACTER_LENGTH(REPLACE(t.product_list, ',', '')) >= n - 1;	-- filtro que conecta cada conjunto n con el valor de la lista de productos
-											-- índice de n = número de comas + 1. Así incluye una nueva fila por cada producto en la lista
+									-- índice de n = número de comas + 1. Así incluye una nueva fila por cada producto en la lista
+			-- Compruebo:
+		SELECT * FROM new_transactions.trans_prod;
     
     -- Eliminar símbolo $ de products.price y convertir datos a decimal(10,2)
 UPDATE products
@@ -157,6 +159,16 @@ Realitza una subconsulta que mostri tots els usuaris amb més de 30 transaccions
         FROM data_users AS du
         WHERE du.user_id = t.user_id)
     HAVING COUNT(t.transaction_id) > 30; -- 3 usuarios
+
+	-- De forma más simplificada se podría hacer:
+SELECT du.user_id, du.name, du.surname
+FROM data_users AS du
+WHERE du.user_id IN (
+		SELECT t.user_id
+        FROM transactions AS t
+        WHERE t.declined = 0 
+        GROUP BY t.user_id
+        HAVING COUNT(t.transaction_id) > 30);	-- 3 usuarios
 
 
 /* Ejercicio 2:
