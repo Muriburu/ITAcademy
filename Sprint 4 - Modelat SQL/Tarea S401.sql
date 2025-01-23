@@ -131,6 +131,23 @@ JOIN
 									-- índice de n = número de comas + 1. Así incluye una nueva fila por cada producto en la lista
 			-- Compruebo:
 		SELECT * FROM new_transactions.trans_prod;
+        
+        -- Se podría hacer una aproximación para detectar de forma automática cuál es el número máximo de índices en las listas:
+WITH RECURSIVE NumberSequence AS (
+    SELECT 1 AS Number
+    UNION ALL
+    SELECT Number + 1
+    FROM NumberSequence
+    WHERE Number < 100
+)
+SELECT Number
+INTO NumberTable
+FROM NumberSequence;
+		-- El máximo es:
+SELECT MAX(
+           LENGTH(product_list) - LENGTH(REPLACE(product_list, ',', '') + 1)
+       ) AS MaxOccurrences
+FROM transactions;
     
     -- Eliminar símbolo $ de products.price y convertir datos a decimal(10,2)
 UPDATE products
