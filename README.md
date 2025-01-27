@@ -7,7 +7,7 @@ Inicio: enero 2025
 - Sprint 1: Entorns de treball  ✔️
 - Sprint 2: BBDD relacionals i introducció a SQL  ✔️
 - Sprint 3: Gestió de taules, índex i vistes  ✔️
-- Sprint 4: Modelat SQL
+- Sprint 4: Modelat SQL  ✔️
 - Sprint 5: Power BI: Introducció i indicadors
 - Sprint 6: Visualitzacions i Informes amb Power BI
 - Sprint 7: Python: Nocions i coneixements bàsics
