@@ -1,0 +1,100 @@
+{
+  "chart": {
+    "title": "Coverage of underlying data on the prevalence of mental illnesses",
+    "subtitle": "Share of the population for which there has been research on the prevalence of mental illnesses. This is defined as having prevalence data collected on each adult age group and gender, as a share of the total adult population of the region.",
+    "note": "Data came from diagnoses and surveys corresponding to the official DSM or ICD diagnostic criteria.",
+    "citation": "Baxter et al. (2013)",
+    "originalChartUrl": "https://ourworldindata.org/grapher/adult-population-covered-in-primary-data-on-the-prevalence-of-mental-illnesses?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "World"
+    ]
+  },
+  "columns": {
+    "Major depression": {
+      "titleShort": "Major depression",
+      "titleLong": "Major depression",
+      "descriptionKey": [],
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2008-2008",
+      "type": "Numeric",
+      "owidVariableId": 686704,
+      "shortName": "major_depression",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Major depression” [dataset]. Baxter et al. (2013) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/686704.metadata.json"
+    },
+    "Bipolar disorder": {
+      "titleShort": "Bipolar disorder",
+      "titleLong": "Bipolar disorder",
+      "descriptionKey": [],
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2008-2008",
+      "type": "Numeric",
+      "owidVariableId": 686708,
+      "shortName": "bipolar_disorders",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Bipolar disorder” [dataset]. Baxter et al. (2013) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/686708.metadata.json"
+    },
+    "Eating disorders": {
+      "titleShort": "Eating disorders",
+      "titleLong": "Eating disorders",
+      "descriptionKey": [],
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2008-2008",
+      "type": "Numeric",
+      "owidVariableId": 686709,
+      "shortName": "eating_disorders",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Eating disorders” [dataset]. Baxter et al. (2013) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/686709.metadata.json"
+    },
+    "Dysthymia": {
+      "titleShort": "Dysthymia",
+      "titleLong": "Dysthymia",
+      "descriptionKey": [],
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2008-2008",
+      "type": "Numeric",
+      "owidVariableId": 686706,
+      "shortName": "dysthymia",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Dysthymia” [dataset]. Baxter et al. (2013) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/686706.metadata.json"
+    },
+    "Schizophrenia": {
+      "titleShort": "Schizophrenia",
+      "titleLong": "Schizophrenia",
+      "descriptionKey": [],
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2008-2008",
+      "type": "NumberOrString",
+      "owidVariableId": 686707,
+      "shortName": "schizophrenia",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Schizophrenia” [dataset]. Baxter et al. (2013) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/686707.metadata.json"
+    },
+    "Anxiety disorders": {
+      "titleShort": "Anxiety disorders",
+      "titleLong": "Anxiety disorders",
+      "descriptionKey": [],
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2008-2008",
+      "type": "Numeric",
+      "owidVariableId": 686705,
+      "shortName": "anxiety_disorders",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Anxiety disorders” [dataset]. Baxter et al. (2013) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/686705.metadata.json"
+    }
+  },
+  "dateDownloaded": "2025-03-20",
+  "activeFilters": {}
+}

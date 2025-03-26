@@ -1,0 +1,2034 @@
+<html xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common" xmlns:genericmetadata="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/genericmetadata"> 
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>2020. Accidents at work and other work-related health problems (lfso_20)</title> 
+  <style type="text/css">
+                
+
+                
+
+                html {
+                    font-family: sans-serif; /* 1 */
+                    -ms-text-size-adjust: 100%; /* 2 */
+                    -webkit-text-size-adjust: 100%; /* 2 */
+                }
+
+                
+
+                body {
+                    margin: 0;
+                }
+
+                
+
+                article,
+                aside,
+                details,
+                figcaption,
+                figure,
+                footer,
+                header,
+                hgroup,
+                main,
+                menu,
+                nav,
+                section,
+                summary {
+                    display: block;
+                }
+
+                
+
+                audio,
+                canvas,
+                progress,
+                video {
+                    display: inline-block; /* 1 */
+                    vertical-align: baseline; /* 2 */
+                }
+
+                
+
+                audio:not([controls]) {
+                    display: none;
+                    height: 0;
+                }
+
+                
+
+                [hidden],
+                template {
+                    display: none;
+                }
+
+                
+
+                a {
+                    background-color: transparent;
+                }
+
+                
+
+                a:active,
+                a:hover {
+                    outline: 0;
+                }
+
+                
+
+                abbr[title] {
+                    border-bottom: 1px dotted;
+                }
+
+                
+
+                b,
+                strong {
+                    font-weight: bold;
+                }
+
+                
+
+                dfn {
+                    font-style: italic;
+                }
+
+                
+
+                h1 {
+                    font-size: 2em;
+                    margin: 0.67em 0;
+                }
+
+                
+
+                mark {
+                    background: #ff0;
+                    color: #000;
+                }
+
+                
+
+                small {
+                    font-size: 80%;
+                }
+
+                
+
+                sub,
+                sup {
+                    font-size: 75%;
+                    line-height: 0;
+                    position: relative;
+                    vertical-align: baseline;
+                }
+
+                sup {
+                    top: -0.5em;
+                }
+
+                sub {
+                    bottom: -0.25em;
+                }
+
+                
+
+                img {
+                    border: 0;
+                }
+
+                
+
+                svg:not(:root) {
+                    overflow: hidden;
+                }
+
+                
+
+                figure {
+                    margin: 1em 40px;
+                }
+
+                
+
+                hr {
+                    -moz-box-sizing: content-box;
+                    box-sizing: content-box;
+                    height: 0;
+                }
+
+                /**
+                * Contain overflow in all browsers.
+                */
+
+                pre {
+                    overflow: auto;
+                }
+
+                
+
+                code,
+                kbd,
+                pre,
+                samp {
+                    font-family: monospace, monospace;
+                    font-size: 1em;
+                }
+
+                
+
+                button,
+                input,
+                optgroup,
+                select,
+                textarea {
+                    color: inherit; /* 1 */
+                    font: inherit; /* 2 */
+                    margin: 0; /* 3 */
+                }
+
+                
+
+                button {
+                    overflow: visible;
+                }
+
+                
+
+                button,
+                select {
+                    text-transform: none;
+                }
+
+                
+
+                button,
+                html input[type="button"], /* 1 */
+                input[type="reset"],
+                input[type="submit"] {
+                    -webkit-appearance: button; /* 2 */
+                    cursor: pointer; /* 3 */
+                }
+
+                
+
+                button[disabled],
+                html input[disabled] {
+                    cursor: default;
+                }
+
+                
+
+                button::-moz-focus-inner,
+                input::-moz-focus-inner {
+                    border: 0;
+                    padding: 0;
+                }
+
+                
+
+                input {
+                    line-height: normal;
+                }
+
+                
+
+                input[type="checkbox"],
+                input[type="radio"] {
+                    box-sizing: border-box; /* 1 */
+                    padding: 0; /* 2 */
+                }
+
+                
+
+                input[type="number"]::-webkit-inner-spin-button,
+                input[type="number"]::-webkit-outer-spin-button {
+                    height: auto;
+                }
+
+                
+
+                input[type="search"] {
+                    -webkit-appearance: textfield; /* 1 */
+                    -moz-box-sizing: content-box;
+                    -webkit-box-sizing: content-box; /* 2 */
+                    box-sizing: content-box;
+                }
+
+                
+
+                input[type="search"]::-webkit-search-cancel-button,
+                input[type="search"]::-webkit-search-decoration {
+                    -webkit-appearance: none;
+                }
+
+                
+
+                fieldset {
+                    border: 1px solid #c0c0c0;
+                    margin: 0 2px;
+                    padding: 0.35em 0.625em 0.75em;
+                }
+
+                
+
+                legend {
+                    border: 0; /* 1 */
+                    padding: 0; /* 2 */
+                }
+
+                
+
+                textarea {
+                    overflow: auto;
+                }
+
+                
+
+                optgroup {
+                    font-weight: bold;
+                }
+
+                /* Tables
+                ========================================================================== */
+
+                
+
+                table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                }
+
+                
+            </style> 
+  <style type="text/css">
+                
+
+
+                
+
+
+                
+                .container {
+                    position: relative;
+                    width: 100%;
+                
+                    margin: 0 auto;
+                    padding: 0 20px;
+                    box-sizing: border-box;
+                    overflow: unset; 
+                }
+                .column, .columns {
+                    width: 100%;
+                    float: left;
+                    box-sizing: border-box;
+                }
+
+                
+                @media (min-width: 400px) {
+                    .container {
+                        width: 85%;
+                        padding: 0; }
+                }
+
+                
+                @media (min-width: 550px) {
+                    .container {
+                        width: 80%; }
+                    
+
+                    .one.column,
+                    .one.columns                    { width: 4.66666666667%; }
+                    .two.columns                    { width: 13.3333333333%; }
+                    .three.columns                  { width: 22%;            }
+                    .four.columns                   { width: 30.6666666667%; }
+                    .five.columns                   { width: 39.3333333333%; }
+                    .six.columns                    { width: 48%;            }
+                    .seven.columns                  { width: 56.6666666667%; }
+                    .eight.columns                  { width: 65.3333333333%; }
+                    .nine.columns                   { width: 74.0%;          }
+                    .ten.columns                    { width: 82.6666666667%; }
+                    .eleven.columns                 { width: 91.3333333333%; }
+                    .twelve.columns                 { width: 100%; margin-left: 0; }
+
+                    .one-third.column               { width: 30.6666666667%; }
+                    .two-thirds.column              { width: 65.3333333333%; }
+
+                    .one-half.column                { width: 48%; }
+
+                
+                    .offset-by-one.column,
+                    .offset-by-one.columns          { margin-left: 8.66666666667%; }
+                    .offset-by-two.column,
+                    .offset-by-two.columns          { margin-left: 17.3333333333%; }
+                    .offset-by-three.column,
+                    .offset-by-three.columns        { margin-left: 26%;            }
+                    .offset-by-four.column,
+                    .offset-by-four.columns         { margin-left: 34.6666666667%; }
+                    .offset-by-five.column,
+                    .offset-by-five.columns         { margin-left: 43.3333333333%; }
+                    .offset-by-six.column,
+                    .offset-by-six.columns          { margin-left: 52%;            }
+                    .offset-by-seven.column,
+                    .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+                    .offset-by-eight.column,
+                    .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+                    .offset-by-nine.column,
+                    .offset-by-nine.columns         { margin-left: 78.0%;          }
+                    .offset-by-ten.column,
+                    .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+                    .offset-by-eleven.column,
+                    .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+                    .offset-by-one-third.column,
+                    .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+                    .offset-by-two-thirds.column,
+                    .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+                    .offset-by-one-half.column,
+                    .offset-by-one-half.columns     { margin-left: 52%; }
+
+                }
+
+
+                
+                html {
+                    font-size: 62.5%; }
+                body {
+                    font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+                    line-height: 1.6;
+                    font-weight: 400;
+                    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    color: #222; }
+
+
+                
+                h1, h2, h3, h4, h5, h6 {
+                    margin-top: 0;
+                    margin-bottom: 2rem;
+                    font-weight: 300; }
+                h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+                h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+                h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+                h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+                h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+                h6 { font-size: 16px; line-height: 24px;  font-weight:700 }
+
+                /* Larger than phablet */
+                @media (min-width: 550px) {
+                    h1 { font-size: 5.0rem; }
+                    h2 { font-size: 4.2rem; }
+                    h3 { font-size: 3.6rem; }
+                    h4 { font-size: 3.0rem; }
+                    h5 { font-size: 2.4rem; }
+                    h6 { font-size: 16px; line-height: 24px;  font-weight:700 }
+                }
+
+                p {
+                    margin-top: 0;
+                }
+
+
+                
+                a {
+                    color: #0E47CB; text-decoration: underline;
+                }
+                a:hover {
+                    color: #072A7B;
+                }
+
+
+                
+                .button,
+                button,
+                input[type="submit"],
+                input[type="reset"],
+                input[type="button"] {
+                    display: inline-block;
+                    height: 38px;
+                    padding: 0 30px;
+                    color: #555;
+                    text-align: center;
+                    font-size: 11px;
+                    font-weight: 600;
+                    line-height: 38px;
+                    text-transform: none;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    background-color: transparent;
+                    border-radius: 4px;
+                    border: 1px solid #bbb;
+                    cursor: pointer;
+                    box-sizing: border-box; }
+                .button:hover,
+                button:hover,
+                input[type="submit"]:hover,
+                input[type="reset"]:hover,
+                input[type="button"]:hover,
+                .button:focus,
+                button:focus,
+                input[type="submit"]:focus,
+                input[type="reset"]:focus,
+                input[type="button"]:focus {
+                    color: #333;
+                    border-color: #888;
+                    outline: 0; }
+                .button.button-primary,
+                button.button-primary,
+                input[type="submit"].button-primary,
+                input[type="reset"].button-primary,
+                input[type="button"].button-primary {
+                    color: #FFF;
+                    background-color: #33C3F0;
+                    border-color: #33C3F0; }
+                .button.button-primary:hover,
+                button.button-primary:hover,
+                input[type="submit"].button-primary:hover,
+                input[type="reset"].button-primary:hover,
+                input[type="button"].button-primary:hover,
+                .button.button-primary:focus,
+                button.button-primary:focus,
+                input[type="submit"].button-primary:focus,
+                input[type="reset"].button-primary:focus,
+                input[type="button"].button-primary:focus {
+                    color: #FFF;
+                    background-color: #1EAEDB;
+                    border-color: #1EAEDB; }
+
+
+                
+                input[type="email"],
+                input[type="number"],
+                input[type="search"],
+                input[type="text"],
+                input[type="tel"],
+                input[type="url"],
+                input[type="password"],
+                textarea,
+                select {
+                    height: 38px;
+                    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+                    background-color: #fff;
+                    border: 1px solid #D1D1D1;
+                    border-radius: 4px;
+                    box-shadow: none;
+                    box-sizing: border-box; }
+                
+                input[type="email"],
+                input[type="number"],
+                input[type="search"],
+                input[type="text"],
+                input[type="tel"],
+                input[type="url"],
+                input[type="password"],
+                textarea {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none; }
+                textarea {
+                    min-height: 65px;
+                    padding-top: 6px;
+                    padding-bottom: 6px; }
+                input[type="email"]:focus,
+                input[type="number"]:focus,
+                input[type="search"]:focus,
+                input[type="text"]:focus,
+                input[type="tel"]:focus,
+                input[type="url"]:focus,
+                input[type="password"]:focus,
+                textarea:focus,
+                select:focus {
+                    border: 1px solid #33C3F0;
+                    outline: 0; }
+                label,
+                legend {
+                    display: block;
+                    margin-bottom: .5rem;
+                    font-weight: 600; }
+                fieldset {
+                    padding: 0;
+                    border-width: 0; }
+                input[type="checkbox"],
+                input[type="radio"] {
+                    display: inline; }
+                label > .label-body {
+                    display: inline-block;
+                    margin-left: .5rem;
+                    font-weight: normal; }
+
+
+                
+                ul {
+                    list-style: disc inside; ul { list-style: circle inside; } ul ul { list-style: square inside; }}
+                ol {
+                    list-style: decimal inside; }
+                ol, ul {
+                    padding-left: 0;
+                    margin: 5px 0 5px 51px;
+                    text-indent: -21px; }
+                li {
+                    margin-bottom: 1rem; }
+
+
+                
+                code {
+                    padding: .2rem .5rem;
+                    margin: 0 .2rem;
+                    font-size: 90%;
+                    white-space: nowrap;
+                    background: #F1F1F1;
+                    border: 1px solid #E1E1E1;
+                    border-radius: 4px; }
+                pre > code {
+                    display: block;
+                    padding: 1rem 1.5rem;
+                    white-space: pre; }
+
+
+                
+                
+
+
+                
+                button,
+                .button {
+                    margin-bottom: 1rem; }
+                input,
+                textarea,
+                select,
+                fieldset {
+                    margin-bottom: 1.5rem; }
+                pre,
+                blockquote,
+                dl,
+                figure,
+                table,
+                p,
+                form {
+                    margin-bottom: 2.5rem; }
+
+
+                
+                .u-full-width {
+                    width: 100%;
+                    box-sizing: border-box; }
+                .u-max-full-width {
+                    max-width: 100%;
+                    box-sizing: border-box; }
+                .u-pull-right {
+                    float: right; }
+                .u-pull-left {
+                    float: left; }
+
+
+                
+                hr {
+                    margin-top: 3rem;
+                    margin-bottom: 3.5rem;
+                    border-width: 0;
+                    border-top: 1px solid #E1E1E1; }
+
+
+                
+                .container:after,
+                .row:after,
+                .u-cf {
+                    content: "";
+                    display: table;
+                    clear: both; }
+
+
+                
+
+
+                
+                @media (min-width: 400px) {}
+
+                
+                @media (min-width: 550px) {}
+
+                
+                @media (min-width: 750px) {}
+
+                
+                @media (min-width: 1000px) {}
+
+                
+                @media (min-width: 1200px) {}
+            </style> 
+  <style type="text/css">
+                .menu, .twelve.columns, .nationalMetadataList {
+                    border-style: solid;
+                    border-color: #b9b9b9;
+                    border-radius: 5px;
+                    border-width: thin;
+                }
+
+                .slider.round { }
+
+                .ui-widget-content {
+                    background: white; a { color: #0E47CB; } a:hover { color: #072A7B; }
+                }
+
+                .menuItem { text-decoration: none;
+                    display: block;
+                    padding: 2px 5px;
+                    font-size:16px;
+                    color: #0e47cb;
+                    min-height: 42px;
+                    align-content: center;
+                    border-bottom: 2px solid rgb(198 216 239 / 25%);
+                }
+
+                .menuItem:hover{
+                
+                    background-color: rgb(198 216 239 / 25%);
+                    color: #0e47cb;
+                }
+
+                #menuBar {
+                    border-width: 3px;
+                    border-color: rgb(198 216 239 / 25%);
+                    border-radius: 5px;
+                }
+
+                .selected {
+                    color: #0e47cb !important;
+                    background-color: rgb(198 216 239 / 25%) !important;
+                }
+
+                a {
+                    display: inline;
+                    
+                }
+                .bookm-concept {
+                    scroll-margin-top: 120px;
+                }
+
+                p {
+                    margin: 5px 0 5px 0;
+                    font-size:15px;
+                }
+
+                h6 {
+                    margin: 1rem 0 1rem 0;
+                    clear: both; 
+                }
+
+                .annexesHead {
+                    margin: 1rem 0 5px 0;
+                }
+
+                hr {
+                    height: 2px;
+                    border-width: 0;
+                    color: gray;
+                    background-color: gray;
+                    opacity: 0.5;
+                    margin: 1.5rem 0 1.5rem 0;
+
+                }
+
+                .accordion {
+                
+                
+                    cursor: pointer;
+                    padding: 18px;
+                    width: 100%;
+                    border: none;
+                    text-align: left;
+                    outline: none;
+                    font-size: 23px !important;
+                    transition: 0.4s;
+                    font-weight:500;
+                    margin-bottom: unset;
+                    align-content: center;
+                    min-height: 80px;
+                }
+
+                .accordion:hover {
+                    background-color: rgb(198 216 239 / 25%);
+                }
+
+                .nonActiveAccorrdionArrow {
+                    display: none;
+                }
+
+                .active, .accordion:hover {
+                
+                }
+
+                .accordion:after {
+                    float: right;
+                    margin-left: 5px;
+                }
+
+                .active:after {
+                
+                }
+
+                .nationalMetadataBtn {
+                    border: 2px solid #143FD9 !important;
+                    height: min-content;
+                }
+                #nationalMetadataBtn {
+                    color: #143FD9;
+                    font-size:15px;
+                    font-weight: 500;
+                }
+                #nationalMetadataBtn:hover {
+                    color: #436DD9;
+                }
+
+                .toggleAllAccs {
+                    color: #143FD9;
+                    border: 2px solid #FFFFFF !important;
+                    font-size:15px !important;
+                    font-weight: 400;
+                    height: min-content;
+                }
+
+                .toggleAllAccs:hover {
+                    border: 2px solid #143FD9 !important;
+                }
+
+                .doNotShowMsg {
+                    display: none;
+                }
+
+                .toEuropeanFileBtn {
+                    color: #143FD9;
+                    background-color: #143FD9 !important;
+                    border: 2px solid #143FD9 !important;
+                    font-size:15px !important;
+                    font-weight: 400;
+                    height: min-content;
+                }
+
+                .goToTop {
+                    display: inline-grid;
+                    position: sticky;
+                    width: 87px;
+                    height: 68px;
+                    top: 90%;
+                    left: 98%;
+                    color: #0e47cb;
+                    justify-items: center;
+                }
+
+                .goToTopIcon {
+                    background-color: #143FD9 !important;
+                    color: white !important;
+                    width: 40px;
+                    height: 40px;
+                    align-content: center;
+                    position: absolute;
+                    text-align: center;
+                    border-radius: 50%;
+                    align-items: center;
+                }
+
+                .goToTopText {
+                    font-size:16px;
+                    font-size: small;
+                    align-self: center;
+                    position: absolute;
+                    align-content: center;
+                    text-align: center;
+                    align-items: center;
+                    align-self: end;
+                    color: black;
+                }
+
+                .panel {
+                    padding: 0 18px;
+                    background-color: white;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+                    font-size: 15px;
+                    border-bottom-style: solid;
+                    border-width: 3px;
+                    border-color: rgb(198 216 239 / 25%);
+                }
+
+                .switch {
+                    position: relative;
+                    display: inline-block;
+                    width: 60px;
+                    height: 34px;
+                }
+
+                .switch input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+
+                .slider {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #dee3e6;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                    border-color: #143FD9;
+                }
+
+                .slider:before {
+                    position: absolute;
+                    content: "";
+                    height: 26px;
+                    width: 26px;
+                    left: 4px;
+                    bottom: 4px;
+                    background-color: #143FD9;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                }
+
+                input:checked + .slider {
+                    background-color: #143FD9;
+                }
+
+                input:focus + .slider {
+                    box-shadow: 0 0 1px #143FD9;
+                    color: red;
+                }
+
+                input:checked + .slider:before {
+                    -webkit-transform: translateX(26px);
+                    -ms-transform: translateX(26px);
+                    transform: translateX(26px);
+                    align-content: center;
+                    background-color: white;
+                    left: 2px
+                }
+
+                input .slider:after {
+                    border-radius: 50%;
+                }
+
+                /* Rounded sliders */
+                .slider.round {
+                    border-radius: 34px;
+                    border-style: solid;
+                    border-width: 2px;
+                }
+
+                .slider.round:before {
+                    border-radius: 50%;
+                    top: 2px;
+                
+                }
+
+                .checkShortMetadata {
+                    position: absolute;
+                    height: 26px;
+                    width: 26px;
+                    top: 2px;
+                    left: 4px;
+                    bottom: 0;
+                    fill: #143FD9;
+                }
+
+                .shortMetadata {
+                    fill: white;
+                }
+
+                .checkFullMetadata {
+                    position: absolute;
+                    height: 26px;
+                    width: 26px;
+                    top: 2px;
+                    left: 29px;
+                    right: 0;
+                    bottom: 0;
+                    fill: #dee3e6;
+                }
+
+                .fullMetadata {
+                    fill: #143FD9;
+                }
+
+
+                .countryElmnt {
+                    font-size: 15px;
+                    font-weight: 500;
+                    margin: 7px 0;
+                    color: #0e47cb !important;
+                }
+                .countryElmnt:hover {
+                    text-decoration: underline;
+                }
+
+                div#html-preview ul {
+                    display: grid;
+                }
+
+                div#html-preview ol {
+                    display: grid;
+                }
+
+                div#html-preview ul a, div#html-preview ol a {
+                    display: inline;
+                    background: none;
+                    color: #0E47CB;
+                    text-decoration: underline;
+                }
+                div#html-preview ul a:hover, div#html-preview ol a:hover {
+                    color: #072A7B;
+                }
+
+                .nationalMetadataList {
+                    a {
+                        font-size: 15px;
+                        color: #1846D0; text-decoration: none;
+                    }
+                    a:hover {
+                        color: #072A7B;
+                        text-decoration: underline;
+                    }
+                    p {
+                        margin: 0 0 0;
+                        height: 35px;
+                        line-height: 1;
+                    }
+                }
+                .countryGroupHeader {
+                    font-weight: 600;
+                    font-size: large;
+                    color: #4f535f;
+                }
+
+                .hide {
+                    display: none;
+                }
+
+                .fullscreen-container {
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: rgba(90, 90, 90, 0.5);
+                    z-index: 9999;
+                }
+
+                .informationMsg {
+                    position: fixed;
+                    top: 30%;
+                    left: 35%;
+                    border-style: solid;
+                    border-color: lightgray;
+                    background-color: white;
+                    padding: 25px;
+                    width: 500px;
+                }
+            </style> 
+  <script type="text/javascript">
+                function selectBtn(element) {
+                    for(var el of document.getElementsByClassName("menuItem")) {
+                        el.classList.remove("selected");
+                    }
+                    element.classList.add("selected");
+                }
+
+                function toggleNationalMetadataList(elt, tabNumber) {
+                    var nationalMetadataList = document.getElementById("nationalMetadataList" + tabNumber);
+                    if(nationalMetadataList.style.display == "none") {
+                        nationalMetadataList.style.display = "block";
+                    } else {
+                        nationalMetadataList.style.display = "none";
+                    }
+
+                    elt.getElementsByTagName("div")[0].getElementsByTagName("div")[1].classList.toggle("nonActiveAccorrdionArrow");
+                    elt.getElementsByTagName("div")[0].getElementsByTagName("div")[2].classList.toggle("nonActiveAccorrdionArrow");
+
+                    var lastBorder = document.getElementById("others" + tabNumber);
+                    if (!lastBorder) {
+                        lastBorder = document.getElementById("candidates" + tabNumber);
+                    }
+					const borderHtml = 'border-right:solid 2px #B3B3B3;';
+                    var lastGroupHtml = lastBorder.innerHTML;
+                    const lastBorderIndex = lastGroupHtml.lastIndexOf(borderHtml);
+					const lastDivIndex = lastGroupHtml.lastIndexOf('div class=');
+					if (lastBorderIndex > 0 && lastBorderIndex > lastDivIndex) {
+						lastBorder.innerHTML = lastGroupHtml.slice(0, lastBorderIndex) + lastGroupHtml.slice(lastBorderIndex+borderHtml.length, lastGroupHtml.length);
+					}
+                }
+
+                function goToEuropeanFile(url) {
+                    window.location.href = url;
+                }
+
+                function toggleBtn(event, tabNumber, switchCheckMark) {
+                    if (event.button == 0) {
+                        var shortMetadataElement = document.getElementById("shortTog" + tabNumber);
+                        var fullMetadataElement = document.getElementById("detailTog" + tabNumber);
+                        fullMetadataElement.classList.toggle("fullMetadata");
+                        shortMetadataElement.classList.toggle("shortMetadata");
+                        if (shortMetadataElement.classList.length == 2) {
+                            displayDetail = "none";
+                            displayShort = "block";
+                        } else {
+                            displayDetail = "block";
+                            displayShort = "none";
+                        }
+                        if (tabNumber) {
+                            document.getElementById("shortSummary" + tabNumber).style.display = displayShort;
+                            document.getElementById("detailSummary" + tabNumber).style.display = displayDetail;
+                            document.getElementById("shortContent" + tabNumber).style.display = displayShort;
+                            document.getElementById("detailContent" + tabNumber).style.display = displayDetail;
+                        }
+                        if (switchCheckMark) {
+                            // for checked mark switch
+                            let checkMark = document.getElementById('checkboxFullMd' + tabNumber);
+                            checkMark.checked = !checkMark.checked;
+                        }
+                    }
+                }
+
+                function toggleAccordion(elt) {
+                    elt.classList.toggle("active");
+                    var panel = elt.nextElementSibling;
+                    if (elt.classList.contains("active")) {
+                        panel.style.maxHeight = "fit-content";
+                    } else {
+                        panel.style.maxHeight = null;
+                    }
+                    elt.getElementsByTagName("div")[0].getElementsByTagName("div")[0].classList.toggle("nonActiveAccorrdionArrow");
+                    elt.getElementsByTagName("div")[0].getElementsByTagName("div")[1].classList.toggle("nonActiveAccorrdionArrow");
+                }
+
+                function toggleAllAccordions(elt, tabNumber) {
+                    // if the button outerText is 'Expand all' we need to perform collapse
+                    // the text on the button is updated in the end of the function
+                    let toCollapse = elt.outerText == ("Expand all");
+                    let shortContent = document.getElementById("shortContent" + tabNumber);
+                    let detailContent = document.getElementById("detailContent" + tabNumber);
+                    if (shortContent) {
+                        let buttons = shortContent.getElementsByTagName("button");
+                        if (buttons.length > 0) {
+                            Array.from(buttons).forEach(btn => {
+                                if (toCollapse) {
+                                    if (!btn.classList.contains("active")) {
+                                        btn.click();
+                                    }
+                                } else {
+                                    if (btn.classList.contains("active")) {
+                                        btn.click();
+                                    }
+                                }
+                            });
+                        }
+                    }
+                    if (detailContent) {
+                        let buttons = detailContent.getElementsByTagName("button");
+                        if (buttons.length > 0) {
+                            Array.from(buttons).forEach(btn => {
+                                if (toCollapse) {
+                                    if (!btn.classList.contains("active")) {
+                                        btn.click();
+                                    }
+                                } else {
+                                    if (btn.classList.contains("active")) {
+                                        btn.click();
+                                    }
+                                }
+                            });
+                        }
+                    }
+                    elt.getElementsByTagName("div")[0].getElementsByTagName("div")[0].classList.toggle("nonActiveAccorrdionArrow");
+                    elt.getElementsByTagName("div")[0].getElementsByTagName("div")[1].classList.toggle("nonActiveAccorrdionArrow");
+                    elt.getElementsByTagName("div")[0].getElementsByTagName("div")[2].classList.toggle("doNotShowMsg");
+                    elt.getElementsByTagName("div")[0].getElementsByTagName("div")[3].classList.toggle("doNotShowMsg");
+                }
+
+                function showInformationMsg(tabNumber) {
+                    document.getElementById("informationMsgContainer" + tabNumber).classList.toggle("hide");
+                }
+            </script>
+  <script src="https://europa.eu/webtools/load.js" type="text/javascript" defer></script>
+  <script type="application/json">{"utility": "piwik", "siteID": 59, "sitePath": ["ec.europa.eu\/eurostat\/cache\/metadata"], "lang": "en", "siteSection": "explanatory notes", "is404": false, "is403": false}</script> 
+ </head> 
+ <body> 
+  <input id="anchor_param" hidden value="Disseminated"><a class="goToTop" href="#"> 
+   <div class="goToTopIcon"> 
+    <svg width="24" height="24" style="fill: white; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg"> <path d="m3.293 11.293 1.414 1.414L11 6.414V20h2V6.414l6.293 6.293 1.414-1.414L12 2.586l-8.707 8.707z"></path> 
+    </svg> 
+   </div> 
+   <div class="goToTopText">
+    Back to top
+   </div> </a> 
+  <div id="html-preview" style="margin-top: -90px;"> 
+   <div class="container" style="width: 76%; margin-top: 12px;"> 
+    <div class="row" style="position:sticky; top:0; background-color:white; z-index:1"> 
+     <div class="three columns"> <a href="https://ec.europa.eu/eurostat"><img src="https://ec.europa.eu/eurostat/cache/metadata/img/estat-logo.svg" alt="Eurostat logo" style="width:185px; padding:10px 0; margin-top: 21px;"></a> 
+     </div> 
+     <div class="seven columns" style="text-align: center; margin-top: 15px;"> <b style="font-size: 35px;">Reference metadata</b>
+      <img src="https://ec.europa.eu/eurostat/cache/metadata/img/i111.jpg" alt="Information message" style="padding:2px 10px; cursor:pointer;" onclick="showInformationMsg('Disseminated');">
+     </div> 
+     <div id="informationMsgContainerDisseminated" class="fullscreen-container hide"> 
+      <div class="informationMsg"> 
+       <p> Reference metadata describe statistical concepts and methodologies used for the collection and generation of data. They provide information on data quality and, since they are strongly content-oriented, assist users in interpreting the data. Reference metadata, unlike structural metadata, can be decoupled from the data. </p> 
+       <p> For more information, please consult our <a href="https://ec.europa.eu/eurostat/web/metadata/overview">metadata website section</a>. </p> 
+       <div onclick="showInformationMsg('Disseminated')" style="cursor: pointer; color: #345092; float: inline-end;">
+        Close
+       </div> 
+      </div> 
+     </div> 
+     <div class="two columns" style="width: 21%;"> 
+      <img src="https://ec.europa.eu/eurostat/cache/metadata/img/img111.png" alt="Graphic logo" style="float: right; width:154px;">
+     </div> 
+     <hr style="margin-top:0; height: 2px; width: 100%;"> 
+    </div> 
+    <div id="buttonsIconsRow" class="row" style="margin-bottom:20px; align-items: top; display: flex;"> 
+     <div class="nine columns" style="width: 78%;"> 
+      <p style="FONT-SIZE:26pt !important;">2020. Accidents at work and other work-related health problems (lfso_20)</p> 
+     </div> 
+     <div class="three columns"> <a style="float:right" href="https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/lfso_20_esms.sdmx.zip" xmlns=""><img src="https://ec.europa.eu/eurostat/cache/metadata/img/download111.jpg" alt="Download"></a><a onclick="window.print();" href="#" style="float:right; margin-right:20px"><img src="https://ec.europa.eu/eurostat/cache/metadata/img/print111.jpg" alt="Print"></a> 
+     </div> 
+    </div> 
+    <div class="row" style="margin-bottom: 20px;"> 
+     <div class="eight columns" style="width: 69.333%; font-size:15px;"> 
+      <p style="margin:0">Reference Metadata in Euro SDMX Metadata Structure (ESMS)</p> 
+      <p> Compiling agency: Eurostat, the statistical office of the European Union.</p> 
+      <p>Need help? Contact the <a href="https://ec.europa.eu/eurostat/contact-us/user-support">Eurostat user support</a> </p> 
+     </div> 
+    </div> 
+    <div class="row" style="margin: 10px 0 0; clear:both;"> 
+     <div class="eight columns" style="margin-top: 1.3rem; margin-left: 0.5%; width:99%"> 
+      <hr style="background-color:rgb(76 89 165 / 50%);"> 
+      <div class="twelve columns" style="text-align: end; border-style: none;"> <button id="toggleAllAccs" type="button" class="toggleAllAccs" onclick="toggleAllAccordions(this,'Disseminated')" style="padding: revert; width: none;"> 
+        <div style="display: flex; min-height: 100%; align-content: center;"> 
+         <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; align-content: center;"> 
+          <svg style="fill: #143FD9; vertical-align: middle; margin-left: 5px;" viewbox="0 0 30 30" width="24" height="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+          </svg> 
+         </div> 
+         <div class="arrowUp" style="float: right; align-content: center;"> 
+          <svg style="fill: #143FD9; vertical-align: middle; margin-left: 5px;" viewbox="0 0 30 30" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+          </svg> 
+         </div> 
+         <div style="color: #143FD9;">
+           Collapse all 
+         </div> 
+         <div class="doNotShowMsg" style="color: #143FD9;">
+           Expand all 
+         </div> 
+        </div> </button> 
+      </div> 
+     </div> 
+     <div class="four columns" style="border-width: thin; border-radius: 5px; border-color: rgb(76 89 165 / 50%);                             border-style: solid; background-color: aliceblue; width:410px;position: absolute; margin:0; height: 58px;"> 
+      <div class="row" style="text-align: center; font-size:22px; height: 100%; align-content: center; display: flex; align-items: center;"> 
+       <div style="margin-right: 10px; margin: auto;">
+        Short metadata
+       </div> <label class="switch" onmouseup="toggleBtn(event, 'Disseminated', false)" style="margin-top: 0.5rem; border-radius: 34px; align-content: end;"><input id="checkboxFullMdDisseminated" type="checkbox" xmlns=""><span class="slider round"> 
+         <svg id="shortTogDisseminated" class="checkShortMetadata shortMetadata" width="24" height="24" xmlns="http://www.w3.org/2000/svg"> <path d="M9.993 19.421 3.286 12.58l1.428-1.401 5.293 5.4 9.286-9.286 1.414 1.414L9.993 19.421z"></path> 
+         </svg> 
+         <svg id="detailTogDisseminated" class="checkFullMetadata" width="24" height="24"> <path d="M9.993 19.421 3.286 12.58l1.428-1.401 5.293 5.4 9.286-9.286 1.414 1.414L9.993 19.421z"></path> 
+         </svg> </span></label> 
+       <div style="margin-left: 10px; margin: auto;">
+        Full metadata
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div id="menuBar" class="three columns menu" style="position:sticky; margin-bottom: 2%; top:120px; width: 23%"> <a class="menuItem" style="background-color:#0e47cb; color:white; border-top-right-radius: 5px; border-top-left-radius: 5px;-webkit-user-modify: read-write-plaintext-only;"> Contents </a> 
+      <div id="detailSummaryDisseminated" style="display:none"> <a class="menuItem" href="#contactDisseminated" onclick="selectBtn(this)">1. Contact</a><a class="menuItem" href="#meta_updateDisseminated" onclick="selectBtn(this)">2. Metadata update</a><a class="menuItem" href="#stat_presDisseminated" onclick="selectBtn(this)">3. Statistical presentation</a><a class="menuItem" href="#unit_measureDisseminated" onclick="selectBtn(this)">4. Unit of measure</a><a class="menuItem" href="#ref_periodDisseminated" onclick="selectBtn(this)">5. Reference Period</a><a class="menuItem" href="#inst_mandateDisseminated" onclick="selectBtn(this)">6. Institutional Mandate</a><a class="menuItem" href="#confDisseminated" onclick="selectBtn(this)">7. Confidentiality</a><a class="menuItem" href="#rel_policyDisseminated" onclick="selectBtn(this)">8. Release policy</a><a class="menuItem" href="#freq_dissDisseminated" onclick="selectBtn(this)">9. Frequency of dissemination</a><a class="menuItem" href="#accessibility_clarityDisseminated" onclick="selectBtn(this)">10. Accessibility and clarity</a><a class="menuItem" href="#quality_mgmntDisseminated" onclick="selectBtn(this)">11. Quality management</a><a class="menuItem" href="#relevanceDisseminated" onclick="selectBtn(this)">12. Relevance</a><a class="menuItem" href="#accuracyDisseminated" onclick="selectBtn(this)">13. Accuracy</a><a class="menuItem" href="#timeliness_punctDisseminated" onclick="selectBtn(this)">14. Timeliness and punctuality</a><a class="menuItem" href="#coher_comparDisseminated" onclick="selectBtn(this)">15. Coherence and comparability</a><a class="menuItem" href="#cost_burdenDisseminated" onclick="selectBtn(this)">16. Cost and Burden</a><a class="menuItem" href="#data_revDisseminated" onclick="selectBtn(this)">17. Data revision</a><a class="menuItem" href="#stat_processDisseminated" onclick="selectBtn(this)">18. Statistical processing</a><a class="menuItem" href="#comment_dsetDisseminated" onclick="selectBtn(this)">19. Comment</a><a class="menuItem" href="#relatedmdDisseminated" onclick="selectBtn(this)">Related metadata</a><a class="menuItem" href="#annexDisseminated" onclick="selectBtn(this)">Annexes</a><a class="menuItem" href="#footnoteDisseminated" onclick="selectBtn(this)">Footnotes</a> 
+      </div> 
+      <div id="shortSummaryDisseminated" style="display:block"> <a class="menuItem" href="#shortdata_descrDisseminated" onclick="selectBtn(this)">Data description</a><a class="menuItem" href="#shortmeta_last_updateDisseminated" onclick="selectBtn(this)">Metadata last update</a><a class="menuItem" href="#shortstat_conc_defDisseminated" onclick="selectBtn(this)">Statistical concepts and definitions</a><a class="menuItem" href="#shortstat_unitDisseminated" onclick="selectBtn(this)">Statistical unit</a><a class="menuItem" href="#shortstat_popDisseminated" onclick="selectBtn(this)">Statistical population</a><a class="menuItem" href="#shortref_areaDisseminated" onclick="selectBtn(this)">Reference area</a><a class="menuItem" href="#shortref_periodDisseminated" onclick="selectBtn(this)">Reference Period</a><a class="menuItem" href="#shortaccuracy_overallDisseminated" onclick="selectBtn(this)">Accuracy - overall</a><a class="menuItem" href="#shortunit_measureDisseminated" onclick="selectBtn(this)">Unit of measure</a><a class="menuItem" href="#shortdata_compDisseminated" onclick="selectBtn(this)">Data compilation</a><a class="menuItem" href="#shortsource_typeDisseminated" onclick="selectBtn(this)">Source data</a><a class="menuItem" href="#shortfreq_dissDisseminated" onclick="selectBtn(this)">Frequency of dissemination</a><a class="menuItem" href="#shorttimelinessDisseminated" onclick="selectBtn(this)">Timeliness</a><a class="menuItem" href="#shortcompar_geoDisseminated" onclick="selectBtn(this)">Comparability - geographical</a><a class="menuItem" href="#shortcompar_timeDisseminated" onclick="selectBtn(this)">Comparability - over time</a> 
+      </div> 
+     </div> 
+     <div id="content" class="nine columns container" style="width: 77%; margin-bottom: 2%; padding: 0 0 0 30px;"> 
+      <div class="row"> 
+       <div style="height: 4px; width: 32px; background-color: #FFCC00; margin-left: 2em; position: absolute;"></div> 
+       <div class="twelve columns" style="border-width: 3px; border-color: rgb(198 216 239 / 25%);"> 
+        <div id="detailContentDisseminated" style="display:none"> <button type="button" title="Individual or organisational contact points for the data or metadata, including information on how to reach the contact points." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="contact"></a><a class="bookm-concept" name="contactDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>1. Contact</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="The name of the organisation of the contact points for the data or metadata."> <a class="bookm-concept" name="contact_organisation"></a>1.1. Contact organisation</h6>
+          <p>Eurostat, the statistical office of the European Union.</p>
+          <h6 title="An addressable subdivision of an organisation"> <a class="bookm-concept" name="organisation_unit"></a>1.2. Contact organisation unit</h6>
+          <p>F3: Labour market and lifelong learning.</p>
+          <h6 title="The name of the contact points for the data or metadata."> <a class="bookm-concept" name="contact_name"></a>1.3. Contact name<span class="ui-icon ui-icon-locked" xmlns=""></span> </h6>Restricted from publication
+          <h6 title="The area of technical responsibility of the contact, such as 'methodology', 'database management' or 'dissemination'."> <a class="bookm-concept" name="contact_funct"></a>1.4. Contact person function<span class="ui-icon ui-icon-locked"></span> </h6>Restricted from publication
+          <h6 title="The postal address of the contact points for the data or metadata."> <a class="bookm-concept" name="contact_mail"></a>1.5. Contact mail address</h6>
+          <p><span>2920 Luxembourg LUXEMBOURG</span></p>
+          <h6 title="E-mail address of the contact points for the data or metadata"> <a class="bookm-concept" name="contact_email"></a>1.6. Contact email address<span class="ui-icon ui-icon-locked"></span> </h6>Restricted from publication
+          <h6 title="The telephone number of the contact points for the data or metadata."> <a class="bookm-concept" name="contact_phone"></a>1.7. Contact phone number<span class="ui-icon ui-icon-locked"></span> </h6>Restricted from publication
+          <h6 title="Fax number of the contact points for the data or metadata."> <a class="bookm-concept" name="contact_fax"></a>1.8. Contact fax number<span class="ui-icon ui-icon-locked"></span> </h6>Restricted from publication
+         </div> <button type="button" title="The date on which the metadata element was inserted or modified in the database." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="meta_update"></a><a class="bookm-concept" name="meta_updateDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>2. Metadata update</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="Date of the latest certification provided by the domain manager to confirm that the metadata posted are still up-to-date, even if the content has not been amended."> <a class="bookm-concept" name="meta_certified"></a>2.1. Metadata last certified</h6>20 November 2023
+          <h6 title="Date of the latest dissemination of the metadata."> <a class="bookm-concept" name="meta_posted"></a>2.2. Metadata last posted</h6>20 November 2023
+          <h6 title="Date of last update of the content of the metadata."> <a class="bookm-concept" name="meta_last_update"></a>2.3. Metadata last update</h6>20 November 2023
+         </div> <button type="button" title="Statistical presentation" class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="stat_pres"></a><a class="bookm-concept" name="stat_presDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>3. Statistical presentation</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="Main characteristics of the data set described in an easily understandable manner, referring to the data and indicators disseminated."> <a class="bookm-concept" name="data_descr"></a>3.1. Data description</h6>
+          <p>The EU has a longstanding commitment to support the principles on secure and adaptable employment, work-life balance and well adapted work environment. As highlighted in the Commission Communication on an EU Strategic Framework on Health and Safety at Work 2014-2020, it is necessary to improve the quality of statistical data collection on work-related accidents and diseases, occupational exposures and work-related ill-health. A repetition of the ad hoc module on accidents at work and work-related health problems in 2020, also conducted in 1999, 2007 and 2013, should make it possible to complement data transmitted by Member States on Community statistics on public health and health and safety at work, as regards statistics on accidents at work. Moreover, the repetition of this module should provide information on occupational exposure to risk factors for physical health and mental well-being.</p> 
+          <p> The module is split in three submodules and includes 11 variables.</p> 
+          <p><strong> </strong><strong>Submodule 1: Accidents at work</strong></p> 
+          <p>The first submodule has a target population of all persons aged 15 – 74 years old that are currently working or were working during the last 12 months before the reference week of the survey. It aims to provide an understanding of workplace safety and the results to enable decision makers in government, industry, business and other organisations to further reduce risks for workers' health and safety.</p> 
+          <p>This submodule includes 4 variables:</p> 
+          <ul> 
+           <li>ACCIDNUM: Number of accidents at work during the last 12 months;</li> 
+           <li>ACCIDTYP: Type of accident at work;</li> 
+           <li>ACCIDJOB: Job linked to the accident;</li> 
+           <li>ACCIDBRK: Duration of absence from work because of the accident at work.</li> 
+          </ul> 
+          <p><strong> </strong><strong>Submodule 2: Work-related health problems</strong></p> 
+          <p>The aim of the second submodule is to give another understanding of workplace health and safety on how many different health problems other than accidents (physical or mental health problems, illnesses, disabilities) persons aged 15 – 74 years old suffered from during the year before the end of the reference week, which were caused by or worsened for work.</p> 
+          <p>This submodule includes 5 variables:</p> 
+          <ul> 
+           <li>HPROBNUM: Number of work-related health problems during the last 12 months;</li> 
+           <li>HPROBTYP: Type of work-related health problem;</li> 
+           <li>HPROBLIM: Health problem limiting daily activities;</li> 
+           <li>HPROBJOB:  Job linked to the health problem;</li> 
+           <li>HPROBBRK: Duration of absence from work because of the work-related health problem.         </li> 
+          </ul> 
+          <p><strong>Submodule 3: Risk factors for physical health and/or mental well-being</strong></p> 
+          <p> </p> 
+          <p>The third submodule aims to understand whether the respondent is exposed to work-related risk factors as listed in the answer categories which could affect his/her physical or mental well-being. The listed answer categories are used in the European Survey of Enterprises on New and Emerging Risks (ESENER) which looks at how European workplaces manage safety and health risks in practice.</p> 
+          <p>This submodule includes 2 variables:</p> 
+          <ul> 
+           <li>PHYSRISK: Exposure to physical health risk factors;</li> 
+           <li>MENTRISK: Exposure to mental well-being risk factors.     </li> 
+          </ul> 
+          <p>Compared with the administrative data collection ESAW (European Statistics of Accidents at Work), the LFS AHMs 2007, 2013 and 2020 give the following additional value: </p> 
+          <ul> 
+           <li>providing information about accidents with less than four days of absence from work, as well as more information about the occurrence of road traffic accidents;</li> 
+           <li>including information about work-related health problems and risk factors for physical health and mental well-being;</li> 
+           <li>enabling the analysis of accidents and work-related health problems by LFS core variables;</li> 
+           <li>enabling a comparison of reporting levels between Member States, economic sectors and other variables.</li> 
+          </ul> 
+          <p>Detailed information on the relevant methodology of the ad hoc module (including the Commission regulation and explanatory notes) as well as documentation from each participating country (national questionnaires and interviewers instructions) can be found on EU-LFS (Statistics Explained) – module.</p> 
+          <p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;">Compared with the administrative data collection ESAW (European Statistics of Accidents at Work), the LFS AHMs 2007, 2013 and 2020 give the following additional value:</p> 
+          <ul> 
+           <li class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;">providing information about accidents with less than four days of absence from work, as well as more information about the occurrence of road traffic accidents;</li> 
+           <li class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;">including information about work-related health problems and risk factors for physical health and mental well-being;</li> 
+           <li class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;">enabling the analysis of accidents and work-related health problems by LFS core variables;</li> 
+           <li class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;">enabling a comparison of reporting levels between Member States, economic sectors and other variables.</li> 
+          </ul>
+          <h6 title="Arrangement or division of objects into groups based on characteristics which the objects have in common."> <a class="bookm-concept" name="class_system"></a>3.2. Classification system</h6>
+          <p style="text-align: justify;">The EU-LFS results are produced in accordance with the relevant international classification systems. Main classifications used are NACE Rev. 1 (NACE Rev. 1.1 from 2005) and NACE Rev. 2 (from 2008) for economic activity, ISCO 88 (COM) and ISCO 08 (from 2011) for occupation, ISCED 2011 for level of education (from 2014) and ISCED-F 2013 for field of education (from 2016), replacing the former ISCED 1997 codes. For more details please consult <a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey_-_methodology" target="_blank">EU-LFS (Statistics Explained) - Methodology</a>.</p>
+          <h6 title="Main economic or other sectors covered by the statistics."> <a class="bookm-concept" name="coverage_sector"></a>3.3. Coverage - sector</h6>
+          <p>As a general rule the EU-LFS covers all economic sectors.</p>
+          <h6 title="Statistical characteristics of statistical observations."> <a class="bookm-concept" name="stat_conc_def"></a>3.4. Statistical concepts and definitions</h6>
+          <p>The full technical definitions adopted by the EU-LFS are available in <a href="http://ec.europa.eu/eurostat/cache/metadata/EN/employ_esms.htm" target="_blank">employ_esms</a>.</p> 
+          <p>The main concepts used in this module are as follows:</p> 
+          <p><strong>Accidents at work: </strong>An accident at work resulting in injury is a discrete and unforeseen event or occurrence which leads to physical harm even if it did not lead to a sick leave. The accident must have occurred whilst engaged in an occupational activity or during the time spent at work.</p> 
+          <p>Excluded are accidents outside work, i.e. during leisure time and during the journey from home to work. Occupational diseases are also excluded from accidents at work.</p> 
+          <p>The accident concept in the EU Labour Force Survey ad-hoc modules (LFS AHM) follows the one used for ESAW data (European Statistics on Accidents at Work) which is defined as "a discrete occurrence in the course of work which leads to physical or mental harm". LFS AHM includes like ESAW the following more unusual types of accidents: accidents during the course of work but outside the usual workplace (such as on other company's premises, in a public place or during transport including road, railway, tram, boat and plane transport, accidents during a mission and during breaks within the premises of the company), during unusual type of work, accidents caused by a third parties including aggressions in public places, accidents which do not require medical treatment and cases of acute poisoning and wilful acts by other persons. Furthermore, the same exclusions as in ESAW apply, i.e. the following types of accidents are not included: accidents at home and during leisure, accidents on the way to or from work (commuting) or travelling during breaks outside the company's premises, accidents without injury of the respondent, occurrences having only a medical origin, i.e. without accidental injury from outside (such as a heart attack at work) and non-accidental health problems. The latter includes for example cases for which a construction worker develops a back pain over one day (instead of pain due to a sudden movement which should be regarded as an accident).</p> 
+          <p>The two main differences to the ESAW data are:</p> 
+          <ul> 
+           <li>While accidents with less than 4 days' absence from work are included, fatal accidents at work are not included;</li> 
+           <li>The reference period of this ad-hoc module covers accidents that occurred during the last 12 months before the interview, in comparison to accidents reported during a calendar year in ESAW.</li> 
+          </ul> 
+          <p><strong>Work related health problems: </strong>A work-related health problem covers all diseases, disabilities and other physical or mental health problems, apart from accidental injuries, suffered by the person during the last 12 months, and caused or made worse by the work. Thus, health problems have a longer, chronic cause whilst an accident is more the result of a very short term or instant (physical) harm. This is a broad concept that covers much more than the recognised occupational diseases.</p> 
+          <ul> 
+           <li>The concept of the work-related health problem is based on a self-assessment of survey respondents in regard with their work-related state of health;</li> 
+           <li>The ad hoc module includes complaints irrespective of their severity;</li> 
+           <li>It includes not only health problems caused by work but also those made worse by work;</li> 
+           <li>It includes health problems where the onset was more than one year prior to the survey, in the case that the respondent had suffered from the health problem during the last 12 months.</li> 
+           <li>Persons who did not work in the 12 months before the reference week of the survey may still suffer from a health problem caused by work more than 12 months ago, and their cases have to be included as a work related health problem.</li> 
+          </ul> 
+          <p><strong>Exposure to risk factors to physical health and mental well-being:</strong></p> 
+          <p>Exposure to risk factors is defined as the occurrence of those risk factors which are mentioned as answer categories for the two related questions:</p> 
+          <ul> 
+           <li>Physical health: difficult work postures or work movements (2007 and 2013); tiring or painful positions (2020), Repetitive hand or arm movements (2020), handling of heavy loads (2007, 2013 and 2020); noise or strong vibration (2007 and 2013; in 2020 the items has been  split); chemicals, dust, fumes, smoke or gases (2007, 2013, 2020); strong visual concentration (2013 and 2020); risks of accidents (2007 and 2013), slips, trips and falls (2020), use of machines or hand tools (excluding vehicles) (2020), Use of vehicles (in the course of work, excluding on the way to and from work) (2020), another significant risk factor for physical health (2020).</li> 
+           <li>Mental well-being: severe time pressure or overload of work (2007, 2013 and 2020), violence or threat of violence (2007, 2013 and 2020), harassment or bullying (2007, 2013 and 2020), poor communication or cooperation within the organisation (2020), having to deal with difficult customers, patients, pupils etc (2020), job insecurity (2020), lack of autonomy, or lack of influence over the work pace or work processes (2020), another significant risk factor for mental well-being (2020).</li> 
+          </ul> 
+          <p>Other concepts present in the tables:</p> 
+          <p><strong>Size of firm</strong> is based on the number of persons working at the local unit and is defined as the total number of persons who work inside the unit (inclusive of working proprietors, partners working regularly in the unit and unpaid family workers), as well as persons who work outside the unit who belong to it and are paid by it (e.g. sales representatives, delivery personnel, repair and maintenance teams). The Eurobase breakdown called “SIZES”  is grouped as follows:</p> 
+          <ul> 
+           <li>Small à from 1 to 10 persons;</li> 
+           <li>Medium à from 11 to 49 persons;</li> 
+           <li>Large à 50 persons and more.</li> 
+          </ul> 
+          <p><strong>Working from home</strong> means doing any productive work related to the person's main job at home. In this context, the breakdown “FREQUENC” refers to:</p> 
+          <ul> 
+           <li>“Usually” as working from home half of the days worked in a reference period of four weeks preceding the end of the reference week.</li> 
+           <li>"Sometimes" as working from home less than half of the days worked, but a least one hour in a reference period of four weeks preceding the end of the reference week.</li> 
+           <li>"Never" as working from home on no occasion in a reference period of four weeks preceding the end of reference week.</li> 
+          </ul> 
+          <p>Note: All percentages are computed excluding missing information from the denominator. In table hsw_ac3 the "Unknown" category regarding the duration of period off work inlcudes items "00 - Still off work because has not yet recovered from the accident, but expects to resume work later" and "01 - Expects never to work again because of this accident".  In table hsw_pb3 the "Unknown" category regarding the duration of period off work inlcudes items "00 - Still off work because has not yet recovered from the health problem, but expects to resume work later" and "01 - Expects never to work again because of this s health problem". </p> 
+          <p>For reference, please consult <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_methodology#Classifications_in_the_EU-LFS">classifications</a>.</p> 
+          <p style="text-align: justify;">For more information on concepts and details please consult <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_methodology" target="_blank">EU-LFS (Statistics Explained) - Methodology.</a></p>
+          <h6 title="Entity for which information is sought and for which statistics are ultimately compiled."> <a class="bookm-concept" name="stat_unit"></a>3.5. Statistical unit</h6>
+          <p>Persons.</p>
+          <h6 title="The total membership or population or 'universe' of a defined class of people, objects or events."> <a class="bookm-concept" name="stat_pop"></a>3.6. Statistical population</h6>
+          <p>The ad hoc module target population is:</p> 
+          <ul> 
+           <li>all persons aged 15 – 74 years old (15 and more for 2007 and 2013) that are currently working or were working during the last 12 months before the reference week of the survey (before the interview in 2007).</li> 
+           <li>all persons aged 15 – 74 years old (15 and more for 2007 and 2013) that are currently working or were working in the past.</li> 
+           <li>all persons in employment aged 15 years and more.</li> 
+          </ul> 
+          <ul> 
+           <li>all persons aged 15 – 74 years old (15 and more for 2007 and 2013) that are currently working or were working during the last 12 months before the reference week of the survey (before the interview in 2007).</li> 
+           <li>all persons aged 15 – 74 years old (15 and more for 2007 and 2013) that are currently working or were working in the past.</li> 
+          </ul>
+          <h6 title="The country or geographic area to which the measured statistical phenomenon relates."> <a class="bookm-concept" name="ref_area"></a>3.7. Reference area</h6>
+          <p>EU Member States, three EFTA Countries (Iceland, Norway and Switzerland).</p>
+          <h6 title="The length of time for which data are available."> <a class="bookm-concept" name="coverage_time"></a>3.8. Coverage - Time</h6>
+          <p style="text-align: justify;">The data covers accidents at work occurring during the 12 months before the reference week of the survey (before the interview in 2007) , as well as non-accidental health problems from which the respondent suffered, at least during 12 months before the reference week of the survey (before the interview in 2007).</p>
+          <h6 title="The period of time used as the base of an index number, or to which a constant series refers."> <a class="bookm-concept" name="base_per"></a>3.9. Base period</h6>
+          <p>Not applicable.</p>
+         </div> <button type="button" title="The unit in which the data values are measured." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="unit_measure"></a><a class="bookm-concept" name="unit_measureDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>4. Unit of measure</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>The indicators in the tables are expressed in percentages.</p>
+         </div> <button type="button" title="The period of time or point in time to which the measured observation is intended to refer." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="ref_period"></a><a class="bookm-concept" name="ref_periodDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>5. Reference Period</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>2007, 2013 and 2020.</p>
+         </div> <button type="button" title="Set of rules or other formal set of instructions assigning responsibility as well as the authority to an organisation for the collection, processing, and dissemination of statistics." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="inst_mandate"></a><a class="bookm-concept" name="inst_mandateDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>6. Institutional Mandate</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="Legal acts or other formal or informal agreements that assign responsibility as well as the authority to an agency for the collection, processing, and dissemination of statistics."> <a class="bookm-concept" name="inst_man_la_oa"></a>6.1. Institutional Mandate - legal acts and other agreements</h6>
+          <p class="doc-ti" style="text-align: justify;">The legal basis for the current module on accidents at work and other work-related health problems is the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2018.286.01.0003.01.ENG">Commission Implementing Regulation (EU) 2018/1709 of 13 November 2018</a>.This means that EU Member States are obliged to carry out the survey and send microdata to Eurostat. In addition, Iceland, Norway, Switzerland (EFTA countries) have also implemented the survey.</p>
+          <h6 title="Arrangements or procedures for data sharing and coordination between data producing agencies."> <a class="bookm-concept" name="inst_man_shar"></a>6.2. Institutional Mandate - data sharing</h6>
+          <p>No mandate for international data sharing.</p>
+         </div> <button type="button" title="A property of data indicating the extent to which their unauthorised disclosure could be prejudicial or harmful to the interest of the source or other relevant parties." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="conf"></a><a class="bookm-concept" name="confDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>7. Confidentiality</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="Legislative measures or other formal procedures which prevent unauthorised disclosure of data that identify a person or economic entity either directly or indirectly."> <a class="bookm-concept" name="conf_policy"></a>7.1. Confidentiality - policy</h6>
+          <p style="text-align: justify;">Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').</p>
+          <h6 title="Rules applied for treating the data set to ensure statistical confidentiality and prevent unauthorised disclosure."> <a class="bookm-concept" name="conf_data_tr"></a>7.2. Confidentiality - data treatment</h6>
+          <p style="text-align: justify;">Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').</p>
+         </div> <button type="button" title="Rules for disseminating statistical data to interested parties." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="rel_policy"></a><a class="bookm-concept" name="rel_policyDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>8. Release policy</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="The schedule of statistical release dates."> <a class="bookm-concept" name="rel_cal_policy"></a>8.1. Release calendar</h6>
+          <p>LFS data for modules are released after the end of the reference period, once data processing and validation are finished.</p>
+          <h6 title="Access to the release calendar information."> <a class="bookm-concept" name="rel_cal_access"></a>8.2. Release calendar access</h6>
+          <p>Not applicable.</p>
+          <h6 title="The policy for release of the data to users, the scope of dissemination (eg, to the public), how users are informed that the data are being released, and whether the policy provides for the dissemination of statistical data to all users at the same time. It also describes the policy for briefing the press in advance of the release of the data."> <a class="bookm-concept" name="rel_pol_us_ac"></a>8.3. Release policy - user access</h6>
+          <p style="text-align: justify;">Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').</p>
+         </div> <button type="button" title="The time interval at which the statistics are disseminated over a given time period." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="freq_diss"></a><a class="bookm-concept" name="freq_dissDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>9. Frequency of dissemination</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>Not applicable.</p>
+         </div> <button type="button" title="The conditions and modalities by which users can obtain, use and interpret data." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="accessibility_clarity"></a><a class="bookm-concept" name="accessibility_clarityDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>10. Accessibility and clarity</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="Regular or ad-hoc press releases linked to the data."> <a class="bookm-concept" name="news_rel"></a>10.1. Dissemination format - News release</h6>
+          <p style="text-align: justify;">Ad hoc results are presented by a press release, together with three Statistics Explained article providing main results and metadata. Additionally, a series of tables is uploaded on <a href="https://ec.europa.eu/eurostat/data/database">Eurostat Database</a>.</p>
+          <h6 title="Regular or ad-hoc publications in which the data are made available to the public."> <a class="bookm-concept" name="publications"></a>10.2. Dissemination format - Publications</h6>
+          <p style="text-align: justify;">The evaluation report summarizes the main definitions and findings of the Labour Force Survey ad hoc modules. To access the reports, please consult <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank">EU-LFS (Statistics Explained) – modules</a>.</p>
+          <h6 title="Information about on-line databases in which the disseminated data can be accessed."> <a class="bookm-concept" name="online_db"></a>10.3. Dissemination format - online database</h6>
+          <p>See <a href="https://ec.europa.eu/eurostat/web/lfs/database" target="_self">online database</a>.</p> 
+          <p>Eurostat also produces tailor-made tables not available online at the request of users (please refer to <a href="https://ec.europa.eu/eurostat/en/web/main/contact-us/user-support">User support - Eurostat</a>).</p>
+          <h6 title="Information on whether micro-data are also disseminated."> <a class="bookm-concept" name="micro_dat_acc"></a>10.4. Dissemination format - microdata access</h6>
+          <p>Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').</p>
+          <h6 title="References to the most important other data dissemination done."> <a class="bookm-concept" name="diss_other"></a>10.5. Dissemination format - other</h6>
+          <p>Not applicable.</p>
+          <h6 title="Descriptive text and references to methodological documents available."> <a class="bookm-concept" name="doc_method"></a>10.6. Documentation on methodology</h6>
+          <p>For information on the 2007, 2013 and 2020 Labour Force Survey ad hoc modules, please consult <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank">EU-LFS (Statistics Explained) – modules</a>.</p>
+          <h6 title="Documentation on procedures applied for quality management and quality assessment."> <a class="bookm-concept" name="quality_doc"></a>10.7. Quality management - documentation</h6>
+          <p>Please consult the evaluation report at <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank">EU-LFS (Statistics Explained) – modules</a>.</p>
+         </div> <button type="button" title="Systems and frameworks in place within an organisation to manage the quality of statistical products and processes." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="quality_mgmnt"></a><a class="bookm-concept" name="quality_mgmntDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>11. Quality management</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="Guidelines focusing on quality in general and dealing with quality of statistical programmes, including measures for ensuring the efficient use of resources."> <a class="bookm-concept" name="quality_assure"></a>11.1. Quality assurance</h6>
+          <p style="text-align: justify;">Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').</p>
+          <h6 title="Overall assessment of data quality, based on standard quality criteria."> <a class="bookm-concept" name="quality_assmnt"></a>11.2. Quality management - assessment</h6>
+          <p style="text-align: justify;">Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').</p>
+         </div> <button type="button" title="The degree to which statistical information meets the real or perceived needs of clients." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="relevance"></a><a class="bookm-concept" name="relevanceDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>12. Relevance</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="Description of users and their respective needs with respect to the statistical data."> <a class="bookm-concept" name="user_needs"></a>12.1. Relevance - User Needs</h6>
+          <p style="text-align: justify;">A multiannual ad hoc module programme has been agreed between Eurostat, the National Statistical Institutes and the main users (basically Commission services).</p> 
+          <p style="text-align: justify;"><a href="http://ec.europa.eu/social/home.jsp?langId=en" target="_blank">DG Employment</a> and several other Directorates of the Commission use EU-LFS results to monitor and evaluate their policies. Key users also include National Statistical Institutes (NSIs), international organisations, news agencies and researchers, who use EU-LFS data for international or intra-EU comparisons. Finally, LFS data are used by Eurostat e.g. for compiling detailed regional indicators and for making estimates on current education and education levels, higher education and research, as well as estimates of labour input for national accounts. </p>
+          <h6 title="Measures to determine user satisfaction."> <a class="bookm-concept" name="user_sat"></a>12.2. Relevance - User Satisfaction</h6>
+          <p style="text-align: justify;">Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').</p>
+          <h6 title="The extent to which all statistics that are needed are available."> <a class="bookm-concept" name="completeness"></a>12.3. Completeness</h6>
+          <p style="text-align: justify;">Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').</p>
+         </div> <button type="button" title="Closeness of computations or estimates to the exact or true values that the statistics were intended to measure." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="accuracy"></a><a class="bookm-concept" name="accuracyDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>13. Accuracy</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="Assessment of accuracy, linked to a certain data set or domain, which is summarising the various components into one single measure."> <a class="bookm-concept" name="accuracy_overall"></a>13.1. Accuracy - overall</h6>
+          <p style="text-align: justify;">Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').</p>
+          <h6 title="That part of the difference between a population value and an estimate thereof, derived from a random sample, which is due to the fact that only a subset of the population is enumerated."> <a class="bookm-concept" name="sampling_err"></a>13.2. Sampling error</h6>
+          <p>FFor the sample size per country, see evaluation report at <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank">EU-LFS (Statistics Explained) – modules</a>.</p>
+          <h6 title="Error in sample estimates which cannot be attributed to sampling fluctuations."> <a class="bookm-concept" name="nonsampling_err"></a>13.3. Non-sampling error</h6>
+          <p>For non-sampling indicators per country, see evaluation report at <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank">EU-LFS (Statistics Explained) – modules</a>.</p>
+         </div> <button type="button" title="Timeliness and punctuality" class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="timeliness_punct"></a><a class="bookm-concept" name="timeliness_punctDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>14. Timeliness and punctuality</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="Length of time between data availability and the event or phenomenon they describe"> <a class="bookm-concept" name="timeliness"></a>14.1. Timeliness</h6>
+          <p>The deadline for data transmissions to Eurostat was 31 March 2021.</p>
+          <h6 title="Time lag between the actual delivery of the data and the target date when it should have been delivered."> <a class="bookm-concept" name="punctuality"></a>14.2. Punctuality</h6>
+          <p>Three countries did not deliver data on time. Initial validation of the data sets was finished in May 2021, with the subsequent revision round finishing in September 2021.</p>
+         </div> <button type="button" title="COHERANCE - Adequacy of statistics to be combined in different ways and for various uses. COMPARABILITY - The extent to which differences between statistics can be attributed to differences        between the true values of the statistical characteristics." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="coher_compar"></a><a class="bookm-concept" name="coher_comparDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>15. Coherence and comparability</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="Extent to which statistics are comparable between geographical areas."> <a class="bookm-concept" name="compar_geo"></a>15.1. Comparability - geographical</h6>
+          <p>For details on comparability see evaluation report at <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank">EU-LFS (Statistics Explained) – modules</a>.</p>
+          <h6 title="Extent to which statistics are comparable or reconcilable over time."> <a class="bookm-concept" name="compar_time"></a>15.2. Comparability - over time</h6>
+          <p>Not applicable.</p>
+          <h6 title="Extent to which statistics are reconcilable with those obtained through other data sources or statistical domains."> <a class="bookm-concept" name="coher_x_dom"></a>15.3. Coherence - cross domain</h6>
+          <p>The Health and safety at work domain also cover this topic. For more information see  the <a href="https://ec.europa.eu/eurostat/cache/metadata/en/hsw_acc_work_esms.htm">ESMS page on Accidents at work (ESAW, 2008 onwards)</a>. </p>
+          <h6 title="Extent to which statistics are consistent within a given data set."> <a class="bookm-concept" name="coher_internal"></a>15.4. Coherence - internal</h6>
+          <p>Published estimates stemming from the LFS are considered fully internally coherent, since arithmetic and accounting identities in the production of LFS datasets are observed.</p>
+         </div> <button type="button" title="Cost associated with the collection and production of a statistical product and burden on respondents." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="cost_burden"></a><a class="bookm-concept" name="cost_burdenDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>16. Cost and Burden</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>Information on average interview lengths is available in the evaluation reports - see <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank">EU-LFS (Statistics Explained) – modules</a>.</p>
+         </div> <button type="button" title="Any change in a value of a statistic released to the public." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="data_rev"></a><a class="bookm-concept" name="data_revDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>17. Data revision</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="Policy aimed at ensuring the transparency of disseminated data, whereby preliminary data are compiled that are later revised."> <a class="bookm-concept" name="rev_policy"></a>17.1. Data revision - policy</h6>
+          <p>These historical data are no longer updated nor revised.</p>
+          <h6 title="Information on the data revision practice."> <a class="bookm-concept" name="rev_practice"></a>17.2. Data revision - practice</h6>
+          <p>These historical data are no longer updated nor revised.</p>
+         </div> <button type="button" title="Statistical processing" class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="stat_process"></a><a class="bookm-concept" name="stat_processDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>18. Statistical processing</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;"> 
+          <h6 title="Characteristics and components of the raw statistical data used for compiling statistical aggregates."> <a class="bookm-concept" name="source_type"></a>18.1. Source data</h6>
+          <p style="text-align: justify;">The source of the data is the European Union Labour Force Survey (EU-LFS). The EU-LFS is a rotating random sample survey of persons in private households. It is organised in thirteen modules, covering their demographic background, labour status, employment characteristics of the main job, hours worked, employment characteristics of the second job, time-related underemployment, search for employment, education and training, previous work experience of persons not in employment, situation one year before the survey, main labour status, income, and technical items relating to the interview. An additional so-called ad hoc module can be added to address specific subjects that change from year to year. For details see Council Regulation (EC) No 577/98 of 9 March 1998 on the organisation of a labour force sample survey in the Community (OJ No L 77/3).</p>
+          <h6 title="Frequency with which the source data are collected."> <a class="bookm-concept" name="freq_coll"></a>18.2. Frequency of data collection</h6>
+          <p>Data collection is quarterly or annual.</p>
+          <h6 title="Systematic process of gathering data for official statistics."> <a class="bookm-concept" name="coll_method"></a>18.3. Data collection</h6>
+          <p style="text-align: justify;">The data is acquired by interviewing the sampled individuals directly. For the sample design and rotation patterns applied in each country, please consult the <a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey" target="_blank">EU-LFS (Statistics Explained) webpage</a>.</p>
+          <h6 title="Process of monitoring the results of data compilation and ensuring the quality of the statistical results."> <a class="bookm-concept" name="data_validation"></a>18.4. Data validation</h6>
+          <p>Prior to the dissemination of national data, LFS results are validated by the Member States and checked for plausibility by Eurostat.</p>
+          <h6 title="Operations performed on data to derive new information according to a given set of rules."> <a class="bookm-concept" name="data_comp"></a>18.5. Data compilation</h6>
+          <p>Aggregate figures are calculated by adding up all the national data series. Rates/Ratios are subsequently calculated from the data expressed in absolute values (i.e. number of persons).</p>
+          <h6 title="The set of procedures employed to modify statistical data to enable it to conform to national or international standards or to address data quality differences when compiling specific data sets."> <a class="bookm-concept" name="adjustment"></a>18.6. Adjustment</h6>
+          <p>No adjustments.</p>
+         </div> <button type="button" title="Supplementary descriptive text which can be attached to data or metadata" class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="comment_dset"></a><a class="bookm-concept" name="comment_dsetDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>19. Comment</span> 
+           <div class=" nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>No notes.</p>
+         </div> <button type="button" class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="relatedmdDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Related metadata</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content"> <a href="https://ec.europa.eu/eurostat/cache/metadata/EN/employ_esms.htm" xmlns="">employ_esms</a> - Employment and unemployment (Labour force survey)
+          <br> 
+         </div> <button type="button" class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="annexDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Annexes</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content"> <a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey" title="http://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey" xmlns="">EU-LFS (Satistics Explained) webpage (additional metadata information)</a> 
+          <br> 
+         </div> <button type="button" class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="footnoteDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Footnotes</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content"></div> 
+        </div> 
+        <div id="shortContentDisseminated" style="display:block"> <button type="button" title="Main characteristics of the data set described in an easily understandable manner, referring to the data and indicators disseminated." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortdata_descrDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Data description</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>The EU has a longstanding commitment to support the principles on secure and adaptable employment, work-life balance and well adapted work environment. As highlighted in the Commission Communication on an EU Strategic Framework on Health and Safety at Work 2014-2020, it is necessary to improve the quality of statistical data collection on work-related accidents and diseases, occupational exposures and work-related ill-health. A repetition of the ad hoc module on accidents at work and work-related health problems in 2020, also conducted in 1999, 2007 and 2013, should make it possible to complement data transmitted by Member States on Community statistics on public health and health and safety at work, as regards statistics on accidents at work. Moreover, the repetition of this module should provide information on occupational exposure to risk factors for physical health and mental well-being.</p> 
+          <p> The module is split in three submodules and includes 11 variables.</p> 
+          <p><strong> </strong><strong>Submodule 1: Accidents at work</strong></p> 
+          <p>The first submodule has a target population of all persons aged 15 – 74 years old that are currently working or were working during the last 12 months before the reference week of the survey. It aims to provide an understanding of workplace safety and the results to enable decision makers in government, industry, business and other organisations to further reduce risks for workers' health and safety.</p> 
+          <p>This submodule includes 4 variables:</p> 
+          <ul> 
+           <li>ACCIDNUM: Number of accidents at work during the last 12 months;</li> 
+           <li>ACCIDTYP: Type of accident at work;</li> 
+           <li>ACCIDJOB: Job linked to the accident;</li> 
+           <li>ACCIDBRK: Duration of absence from work because of the accident at work.</li> 
+          </ul> 
+          <p><strong> </strong><strong>Submodule 2: Work-related health problems</strong></p> 
+          <p>The aim of the second submodule is to give another understanding of workplace health and safety on how many different health problems other than accidents (physical or mental health problems, illnesses, disabilities) persons aged 15 – 74 years old suffered from during the year before the end of the reference week, which were caused by or worsened for work.</p> 
+          <p>This submodule includes 5 variables:</p> 
+          <ul> 
+           <li>HPROBNUM: Number of work-related health problems during the last 12 months;</li> 
+           <li>HPROBTYP: Type of work-related health problem;</li> 
+           <li>HPROBLIM: Health problem limiting daily activities;</li> 
+           <li>HPROBJOB:  Job linked to the health problem;</li> 
+           <li>HPROBBRK: Duration of absence from work because of the work-related health problem.         </li> 
+          </ul> 
+          <p><strong>Submodule 3: Risk factors for physical health and/or mental well-being</strong></p> 
+          <p> </p> 
+          <p>The third submodule aims to understand whether the respondent is exposed to work-related risk factors as listed in the answer categories which could affect his/her physical or mental well-being. The listed answer categories are used in the European Survey of Enterprises on New and Emerging Risks (ESENER) which looks at how European workplaces manage safety and health risks in practice.</p> 
+          <p>This submodule includes 2 variables:</p> 
+          <ul> 
+           <li>PHYSRISK: Exposure to physical health risk factors;</li> 
+           <li>MENTRISK: Exposure to mental well-being risk factors.     </li> 
+          </ul> 
+          <p>Compared with the administrative data collection ESAW (European Statistics of Accidents at Work), the LFS AHMs 2007, 2013 and 2020 give the following additional value: </p> 
+          <ul> 
+           <li>providing information about accidents with less than four days of absence from work, as well as more information about the occurrence of road traffic accidents;</li> 
+           <li>including information about work-related health problems and risk factors for physical health and mental well-being;</li> 
+           <li>enabling the analysis of accidents and work-related health problems by LFS core variables;</li> 
+           <li>enabling a comparison of reporting levels between Member States, economic sectors and other variables.</li> 
+          </ul> 
+          <p>Detailed information on the relevant methodology of the ad hoc module (including the Commission regulation and explanatory notes) as well as documentation from each participating country (national questionnaires and interviewers instructions) can be found on EU-LFS (Statistics Explained) – module.</p> 
+          <p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;">Compared with the administrative data collection ESAW (European Statistics of Accidents at Work), the LFS AHMs 2007, 2013 and 2020 give the following additional value:</p> 
+          <ul> 
+           <li class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;">providing information about accidents with less than four days of absence from work, as well as more information about the occurrence of road traffic accidents;</li> 
+           <li class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;">including information about work-related health problems and risk factors for physical health and mental well-being;</li> 
+           <li class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;">enabling the analysis of accidents and work-related health problems by LFS core variables;</li> 
+           <li class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;">enabling a comparison of reporting levels between Member States, economic sectors and other variables.</li> 
+          </ul>
+         </div> <button type="button" title="Date of last update of the content of the metadata." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortmeta_last_updateDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Metadata last update</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          20 November 2023
+         </div> <button type="button" title="Statistical characteristics of statistical observations." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortstat_conc_defDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Statistical concepts and definitions</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>The full technical definitions adopted by the EU-LFS are available in <a href="http://ec.europa.eu/eurostat/cache/metadata/EN/employ_esms.htm" target="_blank">employ_esms</a>.</p> 
+          <p>The main concepts used in this module are as follows:</p> 
+          <p><strong>Accidents at work: </strong>An accident at work resulting in injury is a discrete and unforeseen event or occurrence which leads to physical harm even if it did not lead to a sick leave. The accident must have occurred whilst engaged in an occupational activity or during the time spent at work.</p> 
+          <p>Excluded are accidents outside work, i.e. during leisure time and during the journey from home to work. Occupational diseases are also excluded from accidents at work.</p> 
+          <p>The accident concept in the EU Labour Force Survey ad-hoc modules (LFS AHM) follows the one used for ESAW data (European Statistics on Accidents at Work) which is defined as "a discrete occurrence in the course of work which leads to physical or mental harm". LFS AHM includes like ESAW the following more unusual types of accidents: accidents during the course of work but outside the usual workplace (such as on other company's premises, in a public place or during transport including road, railway, tram, boat and plane transport, accidents during a mission and during breaks within the premises of the company), during unusual type of work, accidents caused by a third parties including aggressions in public places, accidents which do not require medical treatment and cases of acute poisoning and wilful acts by other persons. Furthermore, the same exclusions as in ESAW apply, i.e. the following types of accidents are not included: accidents at home and during leisure, accidents on the way to or from work (commuting) or travelling during breaks outside the company's premises, accidents without injury of the respondent, occurrences having only a medical origin, i.e. without accidental injury from outside (such as a heart attack at work) and non-accidental health problems. The latter includes for example cases for which a construction worker develops a back pain over one day (instead of pain due to a sudden movement which should be regarded as an accident).</p> 
+          <p>The two main differences to the ESAW data are:</p> 
+          <ul> 
+           <li>While accidents with less than 4 days' absence from work are included, fatal accidents at work are not included;</li> 
+           <li>The reference period of this ad-hoc module covers accidents that occurred during the last 12 months before the interview, in comparison to accidents reported during a calendar year in ESAW.</li> 
+          </ul> 
+          <p><strong>Work related health problems: </strong>A work-related health problem covers all diseases, disabilities and other physical or mental health problems, apart from accidental injuries, suffered by the person during the last 12 months, and caused or made worse by the work. Thus, health problems have a longer, chronic cause whilst an accident is more the result of a very short term or instant (physical) harm. This is a broad concept that covers much more than the recognised occupational diseases.</p> 
+          <ul> 
+           <li>The concept of the work-related health problem is based on a self-assessment of survey respondents in regard with their work-related state of health;</li> 
+           <li>The ad hoc module includes complaints irrespective of their severity;</li> 
+           <li>It includes not only health problems caused by work but also those made worse by work;</li> 
+           <li>It includes health problems where the onset was more than one year prior to the survey, in the case that the respondent had suffered from the health problem during the last 12 months.</li> 
+           <li>Persons who did not work in the 12 months before the reference week of the survey may still suffer from a health problem caused by work more than 12 months ago, and their cases have to be included as a work related health problem.</li> 
+          </ul> 
+          <p><strong>Exposure to risk factors to physical health and mental well-being:</strong></p> 
+          <p>Exposure to risk factors is defined as the occurrence of those risk factors which are mentioned as answer categories for the two related questions:</p> 
+          <ul> 
+           <li>Physical health: difficult work postures or work movements (2007 and 2013); tiring or painful positions (2020), Repetitive hand or arm movements (2020), handling of heavy loads (2007, 2013 and 2020); noise or strong vibration (2007 and 2013; in 2020 the items has been  split); chemicals, dust, fumes, smoke or gases (2007, 2013, 2020); strong visual concentration (2013 and 2020); risks of accidents (2007 and 2013), slips, trips and falls (2020), use of machines or hand tools (excluding vehicles) (2020), Use of vehicles (in the course of work, excluding on the way to and from work) (2020), another significant risk factor for physical health (2020).</li> 
+           <li>Mental well-being: severe time pressure or overload of work (2007, 2013 and 2020), violence or threat of violence (2007, 2013 and 2020), harassment or bullying (2007, 2013 and 2020), poor communication or cooperation within the organisation (2020), having to deal with difficult customers, patients, pupils etc (2020), job insecurity (2020), lack of autonomy, or lack of influence over the work pace or work processes (2020), another significant risk factor for mental well-being (2020).</li> 
+          </ul> 
+          <p>Other concepts present in the tables:</p> 
+          <p><strong>Size of firm</strong> is based on the number of persons working at the local unit and is defined as the total number of persons who work inside the unit (inclusive of working proprietors, partners working regularly in the unit and unpaid family workers), as well as persons who work outside the unit who belong to it and are paid by it (e.g. sales representatives, delivery personnel, repair and maintenance teams). The Eurobase breakdown called “SIZES”  is grouped as follows:</p> 
+          <ul> 
+           <li>Small à from 1 to 10 persons;</li> 
+           <li>Medium à from 11 to 49 persons;</li> 
+           <li>Large à 50 persons and more.</li> 
+          </ul> 
+          <p><strong>Working from home</strong> means doing any productive work related to the person's main job at home. In this context, the breakdown “FREQUENC” refers to:</p> 
+          <ul> 
+           <li>“Usually” as working from home half of the days worked in a reference period of four weeks preceding the end of the reference week.</li> 
+           <li>"Sometimes" as working from home less than half of the days worked, but a least one hour in a reference period of four weeks preceding the end of the reference week.</li> 
+           <li>"Never" as working from home on no occasion in a reference period of four weeks preceding the end of reference week.</li> 
+          </ul> 
+          <p>Note: All percentages are computed excluding missing information from the denominator. In table hsw_ac3 the "Unknown" category regarding the duration of period off work inlcudes items "00 - Still off work because has not yet recovered from the accident, but expects to resume work later" and "01 - Expects never to work again because of this accident".  In table hsw_pb3 the "Unknown" category regarding the duration of period off work inlcudes items "00 - Still off work because has not yet recovered from the health problem, but expects to resume work later" and "01 - Expects never to work again because of this s health problem". </p> 
+          <p>For reference, please consult <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_methodology#Classifications_in_the_EU-LFS">classifications</a>.</p> 
+          <p style="text-align: justify;">For more information on concepts and details please consult <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_methodology" target="_blank">EU-LFS (Statistics Explained) - Methodology.</a></p>
+         </div> <button type="button" title="Entity for which information is sought and for which statistics are ultimately compiled." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortstat_unitDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Statistical unit</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>Persons.</p>
+         </div> <button type="button" title="The total membership or population or 'universe' of a defined class of people, objects or events." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortstat_popDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Statistical population</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>The ad hoc module target population is:</p> 
+          <ul> 
+           <li>all persons aged 15 – 74 years old (15 and more for 2007 and 2013) that are currently working or were working during the last 12 months before the reference week of the survey (before the interview in 2007).</li> 
+           <li>all persons aged 15 – 74 years old (15 and more for 2007 and 2013) that are currently working or were working in the past.</li> 
+           <li>all persons in employment aged 15 years and more.</li> 
+          </ul> 
+          <ul> 
+           <li>all persons aged 15 – 74 years old (15 and more for 2007 and 2013) that are currently working or were working during the last 12 months before the reference week of the survey (before the interview in 2007).</li> 
+           <li>all persons aged 15 – 74 years old (15 and more for 2007 and 2013) that are currently working or were working in the past.</li> 
+          </ul>
+         </div> <button type="button" title="The country or geographic area to which the measured statistical phenomenon relates." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortref_areaDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Reference area</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>EU Member States, three EFTA Countries (Iceland, Norway and Switzerland).</p>
+         </div> <button type="button" title="The period of time or point in time to which the measured observation is intended to refer." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortref_periodDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Reference Period</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>2007, 2013 and 2020.</p>
+         </div> <button type="button" title="Assessment of accuracy, linked to a certain data set or domain, which is summarising the various components into one single measure." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortaccuracy_overallDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Accuracy - overall</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p style="text-align: justify;">Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').</p>
+         </div> <button type="button" title="The unit in which the data values are measured." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortunit_measureDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Unit of measure</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>The indicators in the tables are expressed in percentages.</p>
+         </div> <button type="button" title="Operations performed on data to derive new information according to a given set of rules." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortdata_compDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Data compilation</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>Aggregate figures are calculated by adding up all the national data series. Rates/Ratios are subsequently calculated from the data expressed in absolute values (i.e. number of persons).</p>
+         </div> <button type="button" title="Characteristics and components of the raw statistical data used for compiling statistical aggregates." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortsource_typeDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Source data</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p style="text-align: justify;">The source of the data is the European Union Labour Force Survey (EU-LFS). The EU-LFS is a rotating random sample survey of persons in private households. It is organised in thirteen modules, covering their demographic background, labour status, employment characteristics of the main job, hours worked, employment characteristics of the second job, time-related underemployment, search for employment, education and training, previous work experience of persons not in employment, situation one year before the survey, main labour status, income, and technical items relating to the interview. An additional so-called ad hoc module can be added to address specific subjects that change from year to year. For details see Council Regulation (EC) No 577/98 of 9 March 1998 on the organisation of a labour force sample survey in the Community (OJ No L 77/3).</p>
+         </div> <button type="button" title="The time interval at which the statistics are disseminated over a given time period." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortfreq_dissDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Frequency of dissemination</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>Not applicable.</p>
+         </div> <button type="button" title="Length of time between data availability and the event or phenomenon they describe" class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shorttimelinessDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Timeliness</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>The deadline for data transmissions to Eurostat was 31 March 2021.</p>
+         </div> <button type="button" title="Extent to which statistics are comparable between geographical areas." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortcompar_geoDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Comparability - geographical</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>For details on comparability see evaluation report at <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank">EU-LFS (Statistics Explained) – modules</a>.</p>
+         </div> <button type="button" title="Extent to which statistics are comparable or reconcilable over time." class="accordion active" style="padding: revert; display:grid;" onclick="toggleAccordion(this)"><a class="bookm-concept" name="shortcompar_timeDisseminated"></a> 
+          <div style="display: block; min-height: 100%; align-content: center;"> <span>Comparability - over time</span> 
+           <div class="nonActiveAccorrdionArrow arrowDown" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"></path> 
+            </svg> 
+           </div> 
+           <div class="arrowUp" style="float: right; height: 100%; align-content: center;"> 
+            <svg style="vertical-align: middle; fill: #143FD9;" width="24" height="24"> <path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"></path> 
+            </svg> 
+           </div> 
+          </div> </button> 
+         <div class="panel" style="max-height: fit-content;">
+          <p>Not applicable.</p>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+  <script type="text/javascript" xmlns="">
+            let URL = window.location;
+            if (URL) {
+                let hash = URL.hash;
+                if (hash) {
+                    let anchorSuffix = document.getElementById('anchor_param');
+                    if (anchorSuffix) {
+                        const event = new Event("test");
+                        event.button = 0;
+                        toggleBtn(event, 'Disseminated', true);
+                    }
+                }
+            }
+            var tabRow = document.getElementsByClassName("list-reset");
+            if (!(tabRow && tabRow.length > 0)) {
+                document.getElementById("buttonsIconsRow").style.marginTop = "20px";
+            }
+        </script> 
+ </body>
+</html>

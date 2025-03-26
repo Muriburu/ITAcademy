@@ -1,0 +1,39 @@
+{
+  "chart": {
+    "title": "Dealt with anxiety or depression by engaging in religious/spiritual activities",
+    "subtitle": "Respondents who reported that they 'felt so anxious or depressed that they could not continue their regular daily activities as they normally would for two weeks or longer' were asked whether they ever engaged in religious/spiritual activities to make themselves feel better.",
+    "citation": "Wellcome Global Monitor (2021)",
+    "originalChartUrl": "https://ourworldindata.org/grapher/dealt-with-anxiety-depression-religious-spiritual?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "Georgia",
+      "Canada",
+      "Thailand",
+      "Zambia",
+      "Nigeria",
+      "Bulgaria",
+      "France",
+      "Mexico",
+      "Brazil",
+      "Netherlands",
+      "Denmark"
+    ]
+  },
+  "columns": {
+    "Share - Question: mh8b - Engaged in religious/spiritual activities when anxious/depressed - Answer: Yes - Gender: all - Age group: all": {
+      "titleShort": "Engaged in religious/spiritual activities",
+      "titleLong": "Engaged in religious/spiritual activities",
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2020-2020",
+      "type": "Numeric",
+      "owidVariableId": 679026,
+      "shortName": "share__question_mh8b__engaged_in_religious_spiritual_activities_when_anxious_depressed__answer_yes__gender_all__age_group_all",
+      "lastUpdated": "2023-04-19",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Engaged in religious/spiritual activities” [dataset]. Wellcome Global Monitor (2021) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/679026.metadata.json"
+    }
+  },
+  "dateDownloaded": "2025-03-20",
+  "activeFilters": {}
+}

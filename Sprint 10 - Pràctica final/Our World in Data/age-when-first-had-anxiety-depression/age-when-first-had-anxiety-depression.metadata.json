@@ -1,0 +1,105 @@
+{
+  "chart": {
+    "title": "Age when first had anxiety or depression",
+    "subtitle": "Respondents who reported that they 'felt so anxious or depressed that they could not continue their regular daily activities as they normally would for two weeks or longer' were asked what age they were when they first felt this way.",
+    "citation": "Wellcome Global Monitor (2021)",
+    "originalChartUrl": "https://ourworldindata.org/grapher/age-when-first-had-anxiety-depression?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "Africa",
+      "Asia",
+      "Europe",
+      "Lower-middle-income countries",
+      "Upper-middle-income countries",
+      "High-income countries",
+      "World"
+    ]
+  },
+  "columns": {
+    "Share - Question: mh7b_2 - Age range when first felt anxious/depressed - Answer: Ages <13 - Gender: all - Age group: all": {
+      "titleShort": "Ages <13",
+      "titleLong": "Ages <13",
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2020-2020",
+      "type": "Numeric",
+      "owidVariableId": 678706,
+      "shortName": "share__question_mh7b_2__age_range_when_first_felt_anxious_depressed__answer_ages__lt_13__gender_all__age_group_all",
+      "lastUpdated": "2023-04-19",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Ages <13” [dataset]. Wellcome Global Monitor (2021) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/678706.metadata.json"
+    },
+    "Share - Question: mh7b_2 - Age range when first felt anxious/depressed - Answer: Ages 13-19 - Gender: all - Age group: all": {
+      "titleShort": "Ages 13-19",
+      "titleLong": "Ages 13-19",
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2020-2020",
+      "type": "Numeric",
+      "owidVariableId": 678646,
+      "shortName": "share__question_mh7b_2__age_range_when_first_felt_anxious_depressed__answer_ages_13_19__gender_all__age_group_all",
+      "lastUpdated": "2023-04-19",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Ages 13-19” [dataset]. Wellcome Global Monitor (2021) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/678646.metadata.json"
+    },
+    "Share - Question: mh7b_2 - Age range when first felt anxious/depressed - Answer: Ages 20-29 - Gender: all - Age group: all": {
+      "titleShort": "Ages 20-29",
+      "titleLong": "Ages 20-29",
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2020-2020",
+      "type": "Numeric",
+      "owidVariableId": 678666,
+      "shortName": "share__question_mh7b_2__age_range_when_first_felt_anxious_depressed__answer_ages_20_29__gender_all__age_group_all",
+      "lastUpdated": "2023-04-19",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Ages 20-29” [dataset]. Wellcome Global Monitor (2021) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/678666.metadata.json"
+    },
+    "Share - Question: mh7b_2 - Age range when first felt anxious/depressed - Answer: Ages 30-39 - Gender: all - Age group: all": {
+      "titleShort": "Ages 30-39",
+      "titleLong": "Ages 30-39",
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2020-2020",
+      "type": "Numeric",
+      "owidVariableId": 678686,
+      "shortName": "share__question_mh7b_2__age_range_when_first_felt_anxious_depressed__answer_ages_30_39__gender_all__age_group_all",
+      "lastUpdated": "2023-04-19",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Ages 30-39” [dataset]. Wellcome Global Monitor (2021) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/678686.metadata.json"
+    },
+    "Share - Question: mh7b_2 - Age range when first felt anxious/depressed - Answer: Ages ≥40 - Gender: all - Age group: all": {
+      "titleShort": "Ages 40+",
+      "titleLong": "Ages 40+",
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2020-2020",
+      "type": "Numeric",
+      "owidVariableId": 678726,
+      "shortName": "share__question_mh7b_2__age_range_when_first_felt_anxious_depressed__answer_ages__gte_40__gender_all__age_group_all",
+      "lastUpdated": "2023-04-19",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Ages 40+” [dataset]. Wellcome Global Monitor (2021) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/678726.metadata.json"
+    },
+    "Share - Question: mh7b_2 - Age range when first felt anxious/depressed - Answer: Don't know/Refused - Gender: all - Age group: all": {
+      "titleShort": "Don't know / No response",
+      "titleLong": "Don't know / No response",
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2020-2020",
+      "type": "Numeric",
+      "owidVariableId": 678746,
+      "shortName": "share__question_mh7b_2__age_range_when_first_felt_anxious_depressed__answer_dont_know_refused__gender_all__age_group_all",
+      "lastUpdated": "2023-04-19",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Don't know / No response” [dataset]. Wellcome Global Monitor (2021) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/678746.metadata.json"
+    }
+  },
+  "dateDownloaded": "2025-03-19",
+  "activeFilters": {}
+}

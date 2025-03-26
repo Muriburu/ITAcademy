@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GenericMetadata xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/genericmetadata SDMXGenericMetadata.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message SDMXMessage.xsd" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:genericmetadata="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/genericmetadata" xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common" xmlns:compact="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/compact" xmlns:cross="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/cross" xmlns:generic="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/generic" xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <ID>LFSO_16ES_A</ID>
+        <Test>false</Test>
+        <Name>LFSO_16ES_A_4D_2020_0000 (lfso_20_esms)</Name>
+        <Prepared>2025-03-05T17:15:12</Prepared>
+        <Sender id="4D0">
+            <Contact/>
+        </Sender>
+        <DataSetID>LFSO_16ES_A_1741191312822</DataSetID>
+        <DataSetAction></DataSetAction>
+        <Extracted></Extracted>
+        <ReportingBegin>2020-01-01T00:00:00</ReportingBegin>
+        <ReportingEnd>2020-12-31T00:00:00</ReportingEnd>
+        <DataSetAgency>ESTAT</DataSetAgency>
+    </Header>
+    <genericmetadata:MetadataSet>
+        <genericmetadata:MetadataStructureRef>ESMS_MSD</genericmetadata:MetadataStructureRef>
+        <genericmetadata:MetadataStructureAgencyRef>ESTAT</genericmetadata:MetadataStructureAgencyRef>
+        <genericmetadata:ReportRef>ESMS_REPORT_FULL</genericmetadata:ReportRef>
+        <genericmetadata:AttributeValueSet>
+            <genericmetadata:TargetRef>FULL_ESMS</genericmetadata:TargetRef>
+            <genericmetadata:TargetValues>
+                <genericmetadata:ComponentValue component="TIME_PERIOD" object="TimeDimension">2020-A0</genericmetadata:ComponentValue>
+                <genericmetadata:ComponentValue component="DATA_PROVIDER" object="DataProvider">4D0</genericmetadata:ComponentValue>
+                <genericmetadata:ComponentValue component="DATAFLOW" object="DataFlow">LFSO_16ES_A:1.0</genericmetadata:ComponentValue>
+            </genericmetadata:TargetValues>
+            <genericmetadata:ReportedAttribute conceptID="CONTACT">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="CONTACT_ORGANISATION">
+                    <genericmetadata:Value>&lt;p&gt;Eurostat, the statistical office of the European Union.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="ORGANISATION_UNIT">
+                    <genericmetadata:Value>&lt;p&gt;F3: Labour market and lifelong learning.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="CONTACT_NAME">
+                    <genericmetadata:Value>Restricted from publication</genericmetadata:Value>
+                    <genericmetadata:Annotations>
+                        <common:Annotation>
+                            <common:AnnotationType>RESTRICTED_FOR_PUBLICATION</common:AnnotationType>
+                            <common:AnnotationText>YES</common:AnnotationText>
+                        </common:Annotation>
+                    </genericmetadata:Annotations>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="CONTACT_FUNCT">
+                    <genericmetadata:Value>Restricted from publication</genericmetadata:Value>
+                    <genericmetadata:Annotations>
+                        <common:Annotation>
+                            <common:AnnotationType>RESTRICTED_FOR_PUBLICATION</common:AnnotationType>
+                            <common:AnnotationText>YES</common:AnnotationText>
+                        </common:Annotation>
+                    </genericmetadata:Annotations>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="CONTACT_MAIL">
+                    <genericmetadata:Value>&lt;p&gt;&lt;span&gt;2920 Luxembourg LUXEMBOURG&lt;/span&gt;&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="CONTACT_EMAIL">
+                    <genericmetadata:Value>Restricted from publication</genericmetadata:Value>
+                    <genericmetadata:Annotations>
+                        <common:Annotation>
+                            <common:AnnotationType>RESTRICTED_FOR_PUBLICATION</common:AnnotationType>
+                            <common:AnnotationText>YES</common:AnnotationText>
+                        </common:Annotation>
+                    </genericmetadata:Annotations>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="CONTACT_PHONE">
+                    <genericmetadata:Value>Restricted from publication</genericmetadata:Value>
+                    <genericmetadata:Annotations>
+                        <common:Annotation>
+                            <common:AnnotationType>RESTRICTED_FOR_PUBLICATION</common:AnnotationType>
+                            <common:AnnotationText>YES</common:AnnotationText>
+                        </common:Annotation>
+                    </genericmetadata:Annotations>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="CONTACT_FAX">
+                    <genericmetadata:Value>Restricted from publication</genericmetadata:Value>
+                    <genericmetadata:Annotations>
+                        <common:Annotation>
+                            <common:AnnotationType>RESTRICTED_FOR_PUBLICATION</common:AnnotationType>
+                            <common:AnnotationText>YES</common:AnnotationText>
+                        </common:Annotation>
+                    </genericmetadata:Annotations>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="META_UPDATE">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="META_CERTIFIED">
+                    <genericmetadata:Value>2023-11-20</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="META_POSTED">
+                    <genericmetadata:Value>2023-11-20</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="META_LAST_UPDATE">
+                    <genericmetadata:Value>2023-11-20</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="STAT_PRES">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="DATA_DESCR">
+                    <genericmetadata:Value>&lt;p&gt;The EU has a longstanding commitment to support the principles on secure and adaptable employment, work-life balance and well adapted work environment. As highlighted in the Commission Communication on an EU Strategic Framework on Health and Safety at Work 2014-2020, it is necessary to improve the quality of statistical data collection on work-related accidents and diseases, occupational exposures and work-related ill-health. A repetition of the ad hoc module on accidents at work and work-related health problems in 2020, also conducted in 1999, 2007 and 2013, should make it possible to complement data transmitted by Member States on Community statistics on public health and health and safety at work, as regards statistics on accidents at work. Moreover, the repetition of this module should provide information on occupational exposure to risk factors for physical health and mental well-being.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;The module is split in three submodules and includes 11 variables.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;Submodule 1: Accidents at work&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The first submodule has a target population of all persons aged 15 – 74 years old that are currently working or were working during the last 12 months before the reference week of the survey. It aims to provide an understanding of workplace safety and the results to enable decision makers in government, industry, business and other organisations to further reduce risks for workers' health and safety.&lt;/p&gt;
+&lt;p&gt;This submodule includes 4 variables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ACCIDNUM: Number of accidents at work during the last 12 months;&lt;/li&gt;
+&lt;li&gt;ACCIDTYP: Type of accident at work;&lt;/li&gt;
+&lt;li&gt;ACCIDJOB: Job linked to the accident;&lt;/li&gt;
+&lt;li&gt;ACCIDBRK: Duration of absence from work because of the accident at work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;Submodule 2: Work-related health problems&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The aim of the second submodule is to give another understanding of workplace health and safety on how many different health problems other than accidents (physical or mental health problems, illnesses, disabilities) persons aged 15 – 74 years old&amp;nbsp;suffered from during the year before the end of the reference week, which were caused by or worsened for work.&lt;/p&gt;
+&lt;p&gt;This submodule includes 5 variables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HPROBNUM: Number of work-related health problems during the last 12 months;&lt;/li&gt;
+&lt;li&gt;HPROBTYP: Type of work-related health problem;&lt;/li&gt;
+&lt;li&gt;HPROBLIM: Health problem limiting daily activities;&lt;/li&gt;
+&lt;li&gt;HPROBJOB:&amp;nbsp; Job linked to the health problem;&lt;/li&gt;
+&lt;li&gt;HPROBBRK: Duration of absence from work because of the work-related health problem.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Submodule 3: Risk factors for physical health and/or mental well-being&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;The third submodule aims to understand whether the respondent is exposed to work-related risk factors as listed in the answer categories which could affect his/her physical or mental well-being. The listed answer categories are used in the European Survey of Enterprises on New and Emerging Risks (ESENER) which looks at how European workplaces manage safety and health risks in practice.&lt;/p&gt;
+&lt;p&gt;This submodule includes 2 variables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PHYSRISK: Exposure to physical health risk factors;&lt;/li&gt;
+&lt;li&gt;MENTRISK: Exposure to mental well-being risk factors.&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Compared with the administrative data collection ESAW (European Statistics of Accidents at Work), the LFS AHMs 2007, 2013 and 2020 give the following additional value:&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;providing information about accidents with less than four days of absence from work, as well as more information about the occurrence of road traffic accidents;&lt;/li&gt;
+&lt;li&gt;including information about work-related health problems and risk factors for physical health and mental well-being;&lt;/li&gt;
+&lt;li&gt;enabling the analysis of accidents and work-related health problems by LFS core variables;&lt;/li&gt;
+&lt;li&gt;enabling a comparison of reporting levels between Member States, economic sectors and other variables.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Detailed information on the relevant methodology of the ad hoc module (including the Commission regulation and explanatory notes) as well as documentation from each participating country (national questionnaires and interviewers instructions) can be found on EU-LFS (Statistics Explained) – module.&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;"&gt;Compared with the administrative data collection ESAW (European Statistics of Accidents at Work), the LFS AHMs 2007, 2013 and 2020 give the following additional value:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;"&gt;providing information about accidents with less than four days of absence from work, as well as more information about the occurrence of road traffic accidents;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;"&gt;including information about work-related health problems and risk factors for physical health and mental well-being;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;"&gt;enabling the analysis of accidents and work-related health problems by LFS core variables;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: 15.6pt;"&gt;enabling a comparison of reporting levels between Member States, economic sectors and other variables.&lt;/li&gt;
+&lt;/ul&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="CLASS_SYSTEM">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;The EU-LFS results are produced in accordance with the relevant international classification systems. Main classifications used are NACE Rev. 1 (NACE Rev. 1.1 from 2005) and NACE Rev. 2 (from 2008) for economic activity, ISCO 88 (COM) and ISCO 08 (from 2011) for occupation, ISCED 2011 for level of education (from 2014) and ISCED-F 2013 for field of education (from 2016), replacing the former ISCED 1997 codes. For more details please consult&amp;nbsp;&lt;a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey_-_methodology" target="_blank"&gt;EU-LFS (Statistics Explained) - Methodology&lt;/a&gt;.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="COVERAGE_SECTOR">
+                    <genericmetadata:Value>&lt;p&gt;As a general rule the EU-LFS covers all economic sectors.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="STAT_CONC_DEF">
+                    <genericmetadata:Value>&lt;p&gt;The full technical definitions adopted by the EU-LFS are available in&amp;nbsp;&lt;a href="http://ec.europa.eu/eurostat/cache/metadata/EN/employ_esms.htm" target="_blank"&gt;employ_esms&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The main concepts used in this module are as follows:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Accidents at work: &lt;/strong&gt;An accident at work resulting in injury is a discrete and unforeseen event or occurrence which leads to physical harm even if it did not lead to a sick leave. The accident must have occurred whilst engaged in an occupational activity or during the time spent at work.&lt;/p&gt;
+&lt;p&gt;Excluded are accidents outside work, i.e. during leisure time and during the journey from home to work. Occupational diseases are also excluded from accidents at work.&lt;/p&gt;
+&lt;p&gt;The accident concept in the EU Labour Force Survey ad-hoc modules (LFS AHM) follows the one used for ESAW data (European Statistics on Accidents at Work) which is defined as "a discrete occurrence in the course of work which leads to physical or mental harm". LFS AHM includes like ESAW the following more unusual types of accidents: accidents during the course of work but outside the usual workplace (such as on other company's premises, in a public place or during transport including road, railway, tram, boat and plane transport, accidents during a mission and during breaks within the premises of the company), during unusual type of work, accidents caused by a third parties including aggressions in public places, accidents which do not require medical treatment and cases of acute poisoning and wilful acts by other persons. Furthermore, the same exclusions as in ESAW apply, i.e. the following types of accidents are not included: accidents at home and during leisure, accidents on the way to or from work (commuting) or travelling during breaks outside the company's premises, accidents without injury of the respondent, occurrences having only a medical origin, i.e. without accidental injury from outside (such as a heart attack at work) and non-accidental health problems. The latter includes for example cases for which a construction worker develops a back pain over one day (instead of pain due to a sudden movement which should be regarded as an accident).&lt;/p&gt;
+&lt;p&gt;The two main differences to the ESAW data are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;While accidents with less than 4 days' absence from work are included, fatal accidents at work are not included;&lt;/li&gt;
+&lt;li&gt;The reference period of this ad-hoc module covers accidents that occurred during the last 12 months before the interview, in comparison to accidents reported during a calendar year in ESAW.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Work related health problems: &lt;/strong&gt;A work-related health problem covers all diseases, disabilities and other physical or mental health problems, apart from accidental injuries, suffered by the person during the last 12 months, and caused or made worse by the work. Thus, health problems have a longer, chronic cause whilst an accident is more the result of a very short term or instant (physical) harm. This is a broad concept that covers much more than the recognised occupational diseases.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The concept of the work-related health problem is based on a self-assessment of survey respondents in regard with their work-related state of health;&lt;/li&gt;
+&lt;li&gt;The ad hoc module includes complaints irrespective of their severity;&lt;/li&gt;
+&lt;li&gt;It includes not only health problems caused by work but also those made worse by work;&lt;/li&gt;
+&lt;li&gt;It includes health problems where the onset was more than one year prior to the survey, in the case that the respondent had suffered from the health problem during the last 12 months.&lt;/li&gt;
+&lt;li&gt;Persons who did not work in the 12 months before the reference week of the survey may still suffer from a health problem caused by work more than 12 months ago, and their cases have to be included as a work related health problem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Exposure to risk factors to physical health and mental well-being:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Exposure to risk factors is defined as the occurrence of those risk factors which are mentioned as answer categories for the two related questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Physical health: difficult work postures or work movements (2007 and 2013); tiring or painful positions (2020), Repetitive hand or arm movements (2020), handling of heavy loads (2007, 2013 and 2020); noise or strong vibration (2007 and 2013; in 2020 the items has been&amp;nbsp; split); chemicals, dust, fumes, smoke or gases (2007, 2013, 2020); strong visual concentration (2013 and 2020); risks of accidents (2007 and 2013), slips, trips and falls (2020), use of machines or hand tools (excluding vehicles) (2020), Use of vehicles (in the course of work, excluding on the way to and from work) (2020), another significant risk factor for physical health (2020).&lt;/li&gt;
+&lt;li&gt;Mental well-being: severe time pressure or overload of work (2007, 2013 and 2020), violence or threat of violence (2007, 2013 and 2020), harassment or bullying (2007, 2013 and 2020), poor communication or cooperation within the organisation (2020), having to deal with difficult customers, patients, pupils etc (2020), job insecurity (2020), lack of autonomy, or lack of influence over the work pace or work processes (2020), another significant risk factor for mental well-being (2020).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other concepts present in the tables:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Size of firm&lt;/strong&gt;&amp;nbsp;is based on the number of persons working at the local unit and is defined as the total number of persons who work inside the unit (inclusive of working proprietors, partners working regularly in the unit and unpaid family workers), as well as persons who work outside the unit who belong to it and are paid by it (e.g. sales representatives, delivery personnel, repair and maintenance teams). The Eurobase breakdown called “SIZES” &amp;nbsp;is grouped as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Small à from 1 to 10 persons;&lt;/li&gt;
+&lt;li&gt;Medium à from 11 to 49 persons;&lt;/li&gt;
+&lt;li&gt;Large à 50 persons and more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Working from home&lt;/strong&gt;&amp;nbsp;means doing any productive work related to the person's main job at home. In this context, the breakdown “FREQUENC” refers to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Usually” as working from home half of the days worked in a reference period of four weeks preceding the end of the reference week.&lt;/li&gt;
+&lt;li&gt;"Sometimes" as working from home less than half of the days worked, but a least one hour in a reference period of four weeks preceding the end of the reference week.&lt;/li&gt;
+&lt;li&gt;"Never" as working from home on no occasion in a reference period of four weeks preceding the end of reference week.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: All percentages are computed excluding missing information from the denominator. In table hsw_ac3 the "Unknown" category regarding the duration of period off work inlcudes items "00 -&amp;nbsp;Still off work because has not yet recovered from the accident, but expects to resume work later" and "01 -&amp;nbsp;Expects never to work again because of this accident".&amp;nbsp;&amp;nbsp;In table hsw_pb3 the "Unknown" category regarding the duration of period off work inlcudes items "00 - Still off work because has not yet recovered from the health problem, but expects to resume work later" and "01 -&amp;nbsp;Expects never to work again because of this s health problem".&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;For reference, please consult&amp;nbsp;&lt;a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_methodology#Classifications_in_the_EU-LFS"&gt;classifications&lt;/a&gt;.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;For more information on concepts and details please consult&amp;nbsp;&lt;a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_methodology" target="_blank"&gt;EU-LFS (Statistics Explained) - Methodology.&lt;/a&gt;&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="STAT_UNIT">
+                    <genericmetadata:Value>&lt;p&gt;Persons.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="STAT_POP">
+                    <genericmetadata:Value>&lt;p&gt;The ad hoc module target population is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;all persons aged 15 – 74 years old (15 and more for 2007 and 2013)&amp;nbsp;that are currently working or were working during the last 12 months before the reference week of the survey (before the interview in 2007).&lt;/li&gt;
+&lt;li&gt;all persons aged 15 – 74 years old (15 and more for 2007 and 2013)&amp;nbsp;that are currently working or were working in the past.&lt;/li&gt;
+&lt;li&gt;all persons in employment aged 15 years and more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;all persons aged 15 – 74 years old (15 and more for 2007 and 2013) that are currently working or were working during the last 12 months before the reference week of the survey (before the interview in 2007).&lt;/li&gt;
+&lt;li&gt;all persons aged 15 – 74 years old (15 and more for 2007 and 2013) that are currently working or were working in the past.&lt;/li&gt;
+&lt;/ul&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="REF_AREA">
+                    <genericmetadata:Value>&lt;p&gt;EU Member States, three EFTA Countries (Iceland, Norway and Switzerland).&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="COVERAGE_TIME">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;The data covers accidents at work occurring during the 12 months before the reference week of the survey (before the interview in 2007) , as well as non-accidental health problems from which the respondent suffered, at least during 12 months before the reference week of the survey (before the interview in 2007).&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="BASE_PER">
+                    <genericmetadata:Value>&lt;p&gt;Not applicable.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="UNIT_MEASURE">
+                <genericmetadata:Value>&lt;p&gt;The indicators in the tables are expressed in percentages.&lt;/p&gt;</genericmetadata:Value>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="REF_PERIOD">
+                <genericmetadata:Value>&lt;p&gt;2007, 2013 and 2020.&lt;/p&gt;</genericmetadata:Value>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="INST_MANDATE">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="INST_MAN_LA_OA">
+                    <genericmetadata:Value>&lt;p class="doc-ti" style="text-align: justify;"&gt;The legal basis for the current module on accidents at work and other work-related health problems is the&amp;nbsp;&lt;a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2018.286.01.0003.01.ENG"&gt;Commission Implementing Regulation (EU) 2018/1709 of 13 November 2018&lt;/a&gt;.This means that EU Member States are obliged to carry out the survey and send microdata to Eurostat. In addition, Iceland, Norway, Switzerland (EFTA countries) have also implemented the survey.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="INST_MAN_SHAR">
+                    <genericmetadata:Value>&lt;p&gt;No mandate for international data sharing.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="CONF">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="CONF_POLICY">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="CONF_DATA_TR">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="REL_POLICY">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="REL_CAL_POLICY">
+                    <genericmetadata:Value>&lt;p&gt;LFS data for modules are released after the end of the reference period, once data processing and validation are finished.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="REL_CAL_ACCESS">
+                    <genericmetadata:Value>&lt;p&gt;Not applicable.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="REL_POL_US_AC">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="FREQ_DISS">
+                <genericmetadata:Value>&lt;p&gt;Not applicable.&lt;/p&gt;</genericmetadata:Value>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="ACCESSIBILITY_CLARITY">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="NEWS_REL">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;Ad hoc results are presented by a press release, together with three Statistics Explained article providing main results and metadata. Additionally, a series of tables is uploaded on&amp;nbsp;&lt;a href="https://ec.europa.eu/eurostat/data/database"&gt;Eurostat Database&lt;/a&gt;.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="PUBLICATIONS">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;The evaluation report summarizes the main definitions and findings of the Labour Force Survey ad hoc modules. To access the reports, please consult&amp;nbsp;&lt;a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank"&gt;EU-LFS (Statistics Explained) – modules&lt;/a&gt;.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="ONLINE_DB">
+                    <genericmetadata:Value>&lt;p&gt;See&amp;nbsp;&lt;a href="https://ec.europa.eu/eurostat/web/lfs/database" target="_self"&gt;online database&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Eurostat also produces tailor-made tables not available online at the request of users (please refer to&amp;nbsp;&lt;a href="https://ec.europa.eu/eurostat/en/web/main/contact-us/user-support"&gt;User support - Eurostat&lt;/a&gt;).&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="MICRO_DAT_ACC">
+                    <genericmetadata:Value>&lt;p&gt;Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="DISS_OTHER">
+                    <genericmetadata:Value>&lt;p&gt;Not applicable.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="DOC_METHOD">
+                    <genericmetadata:Value>&lt;p&gt;For information on the 2007, 2013 and 2020 Labour Force Survey ad hoc modules, please consult&amp;nbsp;&lt;a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank"&gt;EU-LFS (Statistics Explained) – modules&lt;/a&gt;.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="QUALITY_DOC">
+                    <genericmetadata:Value>&lt;p&gt;Please consult the evaluation report at&amp;nbsp;&lt;a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank"&gt;EU-LFS (Statistics Explained) – modules&lt;/a&gt;.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="QUALITY_MGMNT">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="QUALITY_ASSURE">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="QUALITY_ASSMNT">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="RELEVANCE">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="USER_NEEDS">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;A multiannual ad hoc module programme has been agreed between Eurostat, the National Statistical Institutes and the main users (basically Commission services).&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;a href="http://ec.europa.eu/social/home.jsp?langId=en" target="_blank"&gt;DG Employment&lt;/a&gt;&amp;nbsp;and several other Directorates of the Commission use EU-LFS results to monitor and evaluate their policies. Key users also include National Statistical Institutes (NSIs), international organisations, news agencies and researchers, who use EU-LFS data for international or intra-EU comparisons. Finally, LFS data are used by Eurostat e.g. for compiling detailed regional indicators and for making estimates on current education and education levels, higher education and research, as well as estimates of labour input for national accounts.&amp;nbsp;&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="USER_SAT">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="COMPLETENESS">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="ACCURACY">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="ACCURACY_OVERALL">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;Please refer to the ESMS page on 'Employment and unemployment (LFS)' (see link below in section 'related metadata').&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="SAMPLING_ERR">
+                    <genericmetadata:Value>&lt;p&gt;FFor the sample size per country, see evaluation report at&amp;nbsp;&lt;a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank"&gt;EU-LFS (Statistics Explained) – modules&lt;/a&gt;.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="NONSAMPLING_ERR">
+                    <genericmetadata:Value>&lt;p&gt;For non-sampling indicators per country, see evaluation report at&amp;nbsp;&lt;a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank"&gt;EU-LFS (Statistics Explained) – modules&lt;/a&gt;.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="TIMELINESS_PUNCT">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="TIMELINESS">
+                    <genericmetadata:Value>&lt;p&gt;The deadline for data transmissions to Eurostat was 31 March 2021.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="PUNCTUALITY">
+                    <genericmetadata:Value>&lt;p&gt;Three countries did not deliver data on time. Initial validation of the data sets was finished in May 2021, with the subsequent revision round finishing in&amp;nbsp;September 2021.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="COHER_COMPAR">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="COMPAR_GEO">
+                    <genericmetadata:Value>&lt;p&gt;For details on comparability see evaluation report at &lt;a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank"&gt;EU-LFS (Statistics Explained) – modules&lt;/a&gt;.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="COMPAR_TIME">
+                    <genericmetadata:Value>&lt;p&gt;Not applicable.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="COHER_X_DOM">
+                    <genericmetadata:Value>&lt;p&gt;The Health and safety at work domain also cover this topic. For more information see &amp;nbsp;the &lt;a href="https://ec.europa.eu/eurostat/cache/metadata/en/hsw_acc_work_esms.htm"&gt;ESMS page on Accidents at work (ESAW, 2008 onwards)&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="COHER_INTERNAL">
+                    <genericmetadata:Value>&lt;p&gt;Published estimates stemming from the LFS are considered fully internally coherent, since arithmetic and accounting identities in the production of LFS datasets are observed.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="COST_BURDEN">
+                <genericmetadata:Value>&lt;p&gt;Information on average interview lengths is available in the evaluation reports - see &lt;a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_labour_force_survey_-_modules" target="_blank"&gt;EU-LFS (Statistics Explained) – modules&lt;/a&gt;.&lt;/p&gt;</genericmetadata:Value>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="DATA_REV">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="REV_POLICY">
+                    <genericmetadata:Value>&lt;p&gt;These historical data are no longer updated nor revised.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="REV_PRACTICE">
+                    <genericmetadata:Value>&lt;p&gt;These historical data are no longer updated nor revised.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="STAT_PROCESS">
+                <genericmetadata:Value></genericmetadata:Value>
+                <genericmetadata:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationType>EDITABLE</common:AnnotationType>
+                        <common:AnnotationText>NO</common:AnnotationText>
+                    </common:Annotation>
+                </genericmetadata:Annotations>
+                <genericmetadata:ReportedAttribute conceptID="SOURCE_TYPE">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;The source of the data is the European Union Labour Force Survey (EU-LFS). The EU-LFS is a rotating random sample survey of persons in private households. It is organised in thirteen modules, covering their demographic background, labour status, employment characteristics of the main job, hours worked, employment characteristics of the second job, time-related underemployment, search for employment, education and training, previous work experience of persons not in employment, situation one year before the survey, main labour status, income, and technical items relating to the interview. An additional so-called ad hoc module can be added to address specific subjects that change from year to year. For details see Council Regulation (EC) No 577/98 of 9 March 1998 on the organisation of a labour force sample survey in the Community (OJ No L 77/3).&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="FREQ_COLL">
+                    <genericmetadata:Value>&lt;p&gt;Data collection is quarterly or annual.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="COLL_METHOD">
+                    <genericmetadata:Value>&lt;p style="text-align: justify;"&gt;The data is acquired by interviewing the sampled individuals directly. For the sample design and rotation patterns applied in each country, please consult the &lt;a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey" target="_blank"&gt;EU-LFS (Statistics Explained) webpage&lt;/a&gt;.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="DATA_VALIDATION">
+                    <genericmetadata:Value>&lt;p&gt;Prior to the dissemination of national data, LFS results are validated by the Member States and checked for plausibility by Eurostat.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="DATA_COMP">
+                    <genericmetadata:Value>&lt;p&gt;Aggregate figures are calculated by adding up all the national data series. Rates/Ratios are subsequently calculated from the data expressed in absolute values (i.e. number of persons).&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+                <genericmetadata:ReportedAttribute conceptID="ADJUSTMENT">
+                    <genericmetadata:Value>&lt;p&gt;No adjustments.&lt;/p&gt;</genericmetadata:Value>
+                </genericmetadata:ReportedAttribute>
+            </genericmetadata:ReportedAttribute>
+            <genericmetadata:ReportedAttribute conceptID="COMMENT_DSET">
+                <genericmetadata:Value>&lt;p&gt;No notes.&lt;/p&gt;</genericmetadata:Value>
+            </genericmetadata:ReportedAttribute>
+        </genericmetadata:AttributeValueSet>
+        <genericmetadata:Annotations>
+            <common:Annotation>
+                <common:AnnotationType>URL</common:AnnotationType>
+                <common:AnnotationTitle>EU-LFS (Satistics Explained) webpage (additional metadata information)</common:AnnotationTitle>
+                <common:AnnotationURL>http://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey</common:AnnotationURL>
+            </common:Annotation>
+            <common:Annotation>
+                <common:AnnotationType>FOR_PUBLICATION</common:AnnotationType>
+                <common:AnnotationText>YES</common:AnnotationText>
+            </common:Annotation>
+            <common:Annotation>
+                <common:AnnotationType>RELATED_METADATA</common:AnnotationType>
+                <common:AnnotationText>employ_esms</common:AnnotationText>
+                <common:AnnotationURL>https://ec.europa.eu/eurostat/cache/metadata/EN/employ_esms.htm</common:AnnotationURL>
+            </common:Annotation>
+        </genericmetadata:Annotations>
+    </genericmetadata:MetadataSet>
+</GenericMetadata>

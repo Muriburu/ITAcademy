@@ -1,0 +1,36 @@
+{
+  "chart": {
+    "title": "Dealt with anxiety or depression by talking to friends or family",
+    "subtitle": "Respondents who reported that they 'felt so anxious or depressed that they could not continue their regular daily activities as they normally would for two weeks or longer' were asked whether they ever talked to friends or family to make themselves feel better.",
+    "citation": "Wellcome Global Monitor (2021)",
+    "originalChartUrl": "https://ourworldindata.org/grapher/dealt-with-anxiety-depression-friends-family?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "Sweden",
+      "Upper-middle-income countries",
+      "India",
+      "Ghana",
+      "Laos",
+      "South Korea",
+      "Russia",
+      "Nicaragua"
+    ]
+  },
+  "columns": {
+    "Share - Question: mh8c - Talked to friends or family when anxious/depressed - Answer: Yes - Gender: all - Age group: all": {
+      "titleShort": "Talked to friends or family",
+      "titleLong": "Talked to friends or family",
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2020-2020",
+      "type": "Numeric",
+      "owidVariableId": 679122,
+      "shortName": "share__question_mh8c__talked_to_friends_or_family_when_anxious_depressed__answer_yes__gender_all__age_group_all",
+      "lastUpdated": "2023-04-19",
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Talked to friends or family” [dataset]. Wellcome Global Monitor (2021) [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/679122.metadata.json"
+    }
+  },
+  "dateDownloaded": "2025-03-20",
+  "activeFilters": {}
+}
