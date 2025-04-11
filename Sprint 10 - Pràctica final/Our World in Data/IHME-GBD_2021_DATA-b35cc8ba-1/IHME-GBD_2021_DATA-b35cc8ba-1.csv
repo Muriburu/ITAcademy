@@ -1,7 +1,0 @@
-measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
-1,Muertes,1,Mundo,3,Ambos,22,Todas las edades,294,Todas las causas,1,Número,2021,67871076.62497172,70624188.62552176,65111321.61785815
-1,Muertes,1,Mundo,3,Ambos,22,Todas las edades,294,Todas las causas,2,Porcentaje,2021,1.0,1.0,1.0
-1,Muertes,1,Mundo,3,Ambos,22,Todas las edades,294,Todas las causas,3,Tasa,2021,860.0689138910507,894.9566181368125,825.097028817103
-2,AVISA (Años de Vida Saludable Perdidos),1,Mundo,3,Ambos,22,Todas las edades,294,Todas las causas,1,Número,2021,2883054326.3927264,3147689598.012937,2635339087.2726936
-2,AVISA (Años de Vida Saludable Perdidos),1,Mundo,3,Ambos,22,Todas las edades,294,Todas las causas,2,Porcentaje,2021,1.0,1.0,1.0
-2,AVISA (Años de Vida Saludable Perdidos),1,Mundo,3,Ambos,22,Todas las edades,294,Todas las causas,3,Tasa,2021,36534.34609400553,39887.83011043433,33395.27438248002
