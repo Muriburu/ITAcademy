@@ -13,5 +13,5 @@ Inicio: enero 2025
 - Sprint 7: Python: Nocions i coneixements bàsics  ✔️
 - Sprint 8: Visualitzacions en Python: Scripts en Power BI  ✔️
 - Sprint 9: Base de dades No Relacionals  ✔️
-- Sprint 10: Pràctica final
+- Sprint 10: Pràctica final ✔️
 
